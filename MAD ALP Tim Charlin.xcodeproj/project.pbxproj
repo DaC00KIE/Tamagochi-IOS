@@ -11,6 +11,7 @@
 		040E41282BF5D34400358910 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E41272BF5D34400358910 /* ContentView.swift */; };
 		040E412A2BF5D34500358910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E41292BF5D34500358910 /* Assets.xcassets */; };
 		040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E412C2BF5D34500358910 /* Preview Assets.xcassets */; };
+		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		040E41272BF5D34400358910 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		040E41292BF5D34500358910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E412C2BF5D34500358910 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */,
 				040E41272BF5D34400358910 /* ContentView.swift */,
+				3FD260882C0028B60076637D /* ProfileView.swift */,
 				040E41292BF5D34500358910 /* Assets.xcassets */,
 				040E412B2BF5D34500358910 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
+				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
 				040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
