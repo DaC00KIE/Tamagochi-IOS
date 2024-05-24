@@ -17,36 +17,38 @@ struct ProfileTextContainer: View {
                 Text(titleText)
                     .foregroundColor(.white)
                     .background(.gray)
-                    .font(.system(size: 20))
+                    .font(.system(size: 18))
                 Spacer()
                 
                 Text(text)
-                    .font(.system(size: 16))
-                    .padding(.leading, 16)
+                    .font(.system(size: 15))
             }
             
             Rectangle()
                 .fill(Color.gray)
                 .frame(height: 1)
-                .offset(y: 24)
         }.padding(4)
     }
 }
 
 struct ProfileView: View {
     var body: some View {
-        HStack {
-            ProfileTextContainer(titleText: "Username", text:"Video")
-            ProfileTextContainer(titleText: "Username", text:"Video")
-        }.padding(8)
-        HStack {
-            ProfileTextContainer(titleText: "Username", text:"Video")
-            ProfileTextContainer(titleText: "Username", text:"Video")
-        }.padding(8)
-        HStack {
-            ProfileTextContainer(titleText: "Username", text:"Video")
-            ProfileTextContainer(titleText: "Username", text:"Video")
-        }.padding(8)
+        VStack {
+            Text("Tamagochi Name")
+                .font(.system(size: 30))
+            HStack {
+                ProfileTextContainer(titleText: "Age", text:"Video")
+                ProfileTextContainer(titleText: "Owned", text:"20y 300d 20h")// change it to years-days-hours format
+            }.padding(12)
+            HStack {
+                ProfileTextContainer(titleText: "Species", text:"Raptorum")
+                ProfileTextContainer(titleText: "DOB", text:"2003-01-09")
+            }.padding(12)
+            HStack {
+                ProfileTextContainer(titleText: "Level", text:"200")
+                ProfileTextContainer(titleText: "Total XP", text:"999999999")//Max Value
+            }.padding(12)
+        }
     }
 }
 
