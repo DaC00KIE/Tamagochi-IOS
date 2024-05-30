@@ -9,7 +9,7 @@ import Foundation
 
 class Pet {
     
-    var name: String = ""
+    var name: String = "name"
     
     var cleanliness: Int = 100
     var hunger: Int = 100
@@ -17,7 +17,7 @@ class Pet {
     var durOwned: Int = 0 //Seconds.
     var species: String = "Raptorum" //TODO: Include more Species names.
     
-    static let `default` = Pet(name: "")
+    static let `default` = Pet(name: "name")
     
     init(name: String) {
         self.name = name;

@@ -32,6 +32,11 @@ struct ProfileTextContainer: View {
 }
 
 struct ProfileView: View {
+    
+    @Environment(\.editMode) var editMode
+    @Environment(ModelData.self) var modelData
+    @State private var draftPet = Pet.default
+    
     var body: some View {
         VStack {
             Text("Tamagochi Name")
@@ -48,10 +53,21 @@ struct ProfileView: View {
                 ProfileTextContainer(titleText: "Level", text:"200")
                 ProfileTextContainer(titleText: "Total XP", text:"999999999")//Max Value
             }.padding(12)
+            Divider().padding()
+            Button(action: {}) {
+                Text("Edit Tamagochi Name")
+                    .padding()
+                    .frame(minWidth:100, maxWidth: .infinity)
+                    .foregroundColor(.white)
+                    .background(.blue)
+                    .cornerRadius(10)
+                    .padding(4)
+            }
         }
     }
 }
 
 #Preview {
     ProfileView()
+        .environment(ModelData())
 }

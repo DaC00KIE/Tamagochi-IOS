@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    
+    @Environment(\.editMode) var editMode
+    @Environment(ModelData.self) var modelData
+    @State private var draftUser = User.default
+    
     var body: some View {
         VStack {
             HStack {
@@ -19,13 +24,14 @@ struct UserProfileView: View {
                     ProfileTextContainer(titleText: "DOB", text:"09-01-2003")
                 }
             }
+            Divider().padding()
             HStack {
                 Button(action: {}) {
                     Text("Edit User")
                         .padding()
                         .frame(minWidth:100, maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(.gray)
+                        .background(.blue)
                         .cornerRadius(10)
                         .padding(4)
                 }
@@ -46,4 +52,5 @@ struct UserProfileView: View {
 #Preview {
 
     UserProfileView()
+        .environment(ModelData())
 }

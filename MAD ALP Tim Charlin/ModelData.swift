@@ -10,6 +10,7 @@ import Foundation
 @Observable
 class ModelData {
     var pet = Pet.default
+    var user = User.default
 }
 
 
