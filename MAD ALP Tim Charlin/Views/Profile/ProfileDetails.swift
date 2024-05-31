@@ -45,5 +45,4 @@ struct ProfileDetails: View {
 
 #Preview {
     ProfileDetails(pet: Pet.default)
-        .environment(ModelData())
 }
