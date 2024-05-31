@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ProfileEditor: View {
+    @Binding var pet: Pet
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            HStack {
+                Text("Tamagochi Name")
+                Spacer()
+                TextField("name", text: $pet.name)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.trailing)
+            }
+        }
     }
 }
 
 #Preview {
-    ProfileEditor()
+    ProfileEditor(pet: .constant(.default))
 }

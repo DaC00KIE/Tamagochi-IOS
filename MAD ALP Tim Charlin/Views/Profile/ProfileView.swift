@@ -38,30 +38,15 @@ struct ProfileView: View {
     @State private var draftPet = Pet.default
     
     var body: some View {
-        VStack {
-            Text("Tamagochi Name")
-                .font(.system(size: 30))
+        VStack() {
             HStack {
-                ProfileTextContainer(titleText: "Age", text:"Video")
-                ProfileTextContainer(titleText: "Owned", text:"20y 300d 20h")// change it to years-days-hours format
-            }.padding(12)
-            HStack {
-                ProfileTextContainer(titleText: "Species", text:"Raptorum")
-                ProfileTextContainer(titleText: "DOB", text:"2003-01-09")
-            }.padding(12)
-            HStack {
-                ProfileTextContainer(titleText: "Level", text:"200")
-                ProfileTextContainer(titleText: "Total XP", text:"999999999")//Max Value
-            }.padding(12)
-            Divider().padding()
-            Button(action: {}) {
-                Text("Edit Tamagochi Name")
-                    .padding()
-                    .frame(minWidth:100, maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .cornerRadius(10)
-                    .padding(4)
+                EditButton()
+            }
+
+            if editMode?.wrappedValue == .inactive {
+                ProfileDetails(pet: modelData.pet)
+            } else {
+                ProfileEditor(pet: $draftPet)
             }
         }
     }

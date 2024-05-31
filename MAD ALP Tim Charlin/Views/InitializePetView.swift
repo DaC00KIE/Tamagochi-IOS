@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct InitializePetView: View {
+    
+    @Binding var pet: Pet
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("As You Went Home, you will need to name your Tamagochi. What will you name it?")
+                .multilineTextAlignment(.center)
+            
+            TextField("Tamagotchi Name", text: $pet.name)
+                .multilineTextAlignment(.center)
+                .font(.system(size: 30))
+                .padding()
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: EmptyView())
     }
 }
 
 #Preview {
-    InitializePetView()
+    InitializePetView(pet: .constant(.default))
 }

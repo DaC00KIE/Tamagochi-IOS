@@ -18,7 +18,8 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()*/
-        ProfileTextContainer(titleText: "Username", text:"Video")
+        //ProfileTextContainer(titleText: "Username", text:"Video")
+        FirstPlayView()
     }
 }
 
