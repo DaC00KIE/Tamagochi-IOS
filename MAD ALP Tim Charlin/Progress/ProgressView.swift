@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct ProgressView: View {
+    @StateObject private var progressModel = ProgressViewModel()
+    
     @State private var hunger: Int = 5
     @State private var cleanliness: Int = 5
     @State private var happiness: Int = 5
     @State private var energy: Int = 5
-
-    let hungerTimer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
-    let cleanlinessTimer = Timer.publish(every: 6.0, on: .main, in: .common).autoconnect()
-    let happinessTimer = Timer.publish(every: 7.0, on: .main, in: .common).autoconnect()
-    let energyTimer = Timer.publish(every: 8.0, on: .main, in: .common).autoconnect()
-
+    @State private var isClickedToShop: Bool = false
+    
+    let hungerTimer = Timer.publish(every: 60.0, on: .main, in: .common).autoconnect()
+    let cleanlinessTimer = Timer.publish(every: 120.0, on: .main, in: .common).autoconnect()
+    let happinessTimer = Timer.publish(every: 90.0, on: .main, in: .common).autoconnect()
+    let energyTimer = Timer.publish(every: 100.0, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         VStack {
             Text("Tamagotchi")
@@ -27,30 +30,30 @@ struct ProgressView: View {
             HStack {
                 VStack {
                     Text("Hunger")
-                    ProgressBar(value: $hunger, maxValue: 10)
+                    ProgressBar(value: $progressModel.hunger, maxValue: progressModel.maxHunger)
                 }
                 VStack {
                     Text("Cleanliness")
-                    ProgressBar(value: $cleanliness, maxValue: 10)
+                    ProgressBar(value: $progressModel.cleanliness, maxValue: progressModel.maxCleanliness)
                 }
             }
             .padding()
-
+            
             HStack {
                 VStack {
                     Text("Happiness")
-                    ProgressBar(value: $happiness, maxValue: 10)
+                    ProgressBar(value: $progressModel.happiness, maxValue: progressModel.maxHappiness)
                 }
                 VStack {
                     Text("Energy")
-                    ProgressBar(value: $energy, maxValue: 10)
+                    ProgressBar(value: $progressModel.energy, maxValue: progressModel.maxEnergy)
                 }
             }
             .padding()
-
+            
             HStack {
                 Button(action: {
-                    if hunger < 10 { hunger += 1 }
+                    if progressModel.hunger < progressModel.maxHunger { progressModel.hunger += 1 }
                 }) {
                     Text("Feed")
                 }
@@ -60,7 +63,7 @@ struct ProgressView: View {
                 .cornerRadius(10)
                 
                 Button(action: {
-                    if cleanliness < 10 { cleanliness += 1 }
+                    if progressModel.cleanliness < progressModel.maxCleanliness { progressModel.cleanliness += 1 }
                 }) {
                     Text("Clean")
                 }
@@ -70,10 +73,10 @@ struct ProgressView: View {
                 .cornerRadius(10)
             }
             .padding()
-
+            
             HStack {
                 Button(action: {
-                    if happiness < 10 { happiness += 1 }
+                    if progressModel.happiness < progressModel.maxHappiness { progressModel.happiness += 1 }
                 }) {
                     Text("Play")
                 }
@@ -83,7 +86,7 @@ struct ProgressView: View {
                 .cornerRadius(10)
                 
                 Button(action: {
-                    if energy < 10 { energy += 1 }
+                    if progressModel.energy < progressModel.maxEnergy { progressModel.energy += 1 }
                 }) {
                     Text("Rest")
                 }
@@ -94,6 +97,18 @@ struct ProgressView: View {
             }
             .padding()
             
+            Text("Shop")
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .onTapGesture {
+                    self.isClickedToShop = true
+                }
+                .fullScreenCover(isPresented: $isClickedToShop) {
+                    Content_View()
+                }
+
             Spacer()
         }
         .onReceive(hungerTimer) { _ in
@@ -121,18 +136,12 @@ struct ProgressBar: View {
                 .frame(width: 100, height: 20)
                 .opacity(0.3)
                 .foregroundColor(Color.gray)
-
+            
             Rectangle()
                 .frame(width: CGFloat(value) * 10, height: 20)
                 .foregroundColor(Color.green)
         }
         .cornerRadius(10)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 

@@ -12,6 +12,7 @@
 		040E412A2BF5D34500358910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E41292BF5D34500358910 /* Assets.xcassets */; };
 		040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E412C2BF5D34500358910 /* Preview Assets.xcassets */; };
 		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
+		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
@@ -24,6 +25,7 @@
 		040E41292BF5D34500358910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E412C2BF5D34500358910 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0429AA482C083FFA005E85F4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -59,14 +61,12 @@
 		040E41242BF5D34400358910 /* MAD ALP Tim Charlin */ = {
 			isa = PBXGroup;
 			children = (
-				0429AA482C083FFA005E85F4 /* ProgressView.swift */,
 				040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */,
 				040E41272BF5D34400358910 /* ContentView.swift */,
-				3FD260882C0028B60076637D /* ProfileView.swift */,
 				040E41292BF5D34500358910 /* Assets.xcassets */,
+				14456E3E2C0840A600F24E96 /* Profile */,
 				040E412B2BF5D34500358910 /* Preview Content */,
-				3FD2608A2C00310A0076637D /* CircleImage.swift */,
-				3FD2608E2C0032280076637D /* UserProfileView.swift */,
+				14456E3F2C0840CC00F24E96 /* Progress */,
 			);
 			path = "MAD ALP Tim Charlin";
 			sourceTree = "<group>";
@@ -77,6 +77,25 @@
 				040E412C2BF5D34500358910 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14456E3E2C0840A600F24E96 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3FD260882C0028B60076637D /* ProfileView.swift */,
+				3FD2608A2C00310A0076637D /* CircleImage.swift */,
+				3FD2608E2C0032280076637D /* UserProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		14456E3F2C0840CC00F24E96 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				0429AA482C083FFA005E85F4 /* ProgressView.swift */,
+				14456E402C08417F00F24E96 /* ShopView.swift */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
+				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
