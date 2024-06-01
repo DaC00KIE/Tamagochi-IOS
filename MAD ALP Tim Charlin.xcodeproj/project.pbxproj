@@ -11,6 +11,10 @@
 		040E41282BF5D34400358910 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E41272BF5D34400358910 /* ContentView.swift */; };
 		040E412A2BF5D34500358910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E41292BF5D34500358910 /* Assets.xcassets */; };
 		040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E412C2BF5D34500358910 /* Preview Assets.xcassets */; };
+		0418E88E2C08507F00138599 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418E88D2C08507F00138599 /* Pet.swift */; };
+		0418E8912C08566600138599 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418E8902C08566600138599 /* Hat.swift */; };
+		0418E8932C085DA800138599 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418E8922C085DA800138599 /* CustomizeView.swift */; };
+		04EEE3A82C093EBE00251E50 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEE3A72C093EBE00251E50 /* MainMenu.swift */; };
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
@@ -22,6 +26,10 @@
 		040E41272BF5D34400358910 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		040E41292BF5D34500358910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E412C2BF5D34500358910 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0418E88D2C08507F00138599 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		0418E8902C08566600138599 /* Hat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
+		0418E8922C085DA800138599 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
+		04EEE3A72C093EBE00251E50 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -61,7 +69,6 @@
 				0418E88A2C084D5F00138599 /* Views */,
 				0418E8892C084D5800138599 /* Models */,
 				040E41292BF5D34500358910 /* Assets.xcassets */,
-				040E412C2BF5D34500358910 /* Preview Assets.xcassets */,
 				040E412B2BF5D34500358910 /* Preview Content */,
 			);
 			path = "MAD ALP Tim Charlin";
@@ -70,6 +77,7 @@
 		040E412B2BF5D34500358910 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				040E412C2BF5D34500358910 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -77,6 +85,8 @@
 		0418E8892C084D5800138599 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0418E88D2C08507F00138599 /* Pet.swift */,
+				0418E8902C08566600138599 /* Hat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +94,8 @@
 		0418E88A2C084D5F00138599 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04EEE3A62C093EAD00251E50 /* MainGame */,
+				0418E88F2C08536D00138599 /* Customization */,
 				0418E88C2C084D7E00138599 /* Profile */,
 				0418E88B2C084D7200138599 /* Support */,
 				040E41272BF5D34400358910 /* ContentView.swift */,
@@ -106,6 +118,22 @@
 				3FD2608E2C0032280076637D /* UserProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		0418E88F2C08536D00138599 /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				0418E8922C085DA800138599 /* CustomizeView.swift */,
+			);
+			path = Customization;
+			sourceTree = "<group>";
+		};
+		04EEE3A62C093EAD00251E50 /* MainGame */ = {
+			isa = PBXGroup;
+			children = (
+				04EEE3A72C093EBE00251E50 /* MainMenu.swift */,
+			);
+			path = MainGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
+				04EEE3A82C093EBE00251E50 /* MainMenu.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
+				0418E88E2C08507F00138599 /* Pet.swift in Sources */,
+				0418E8932C085DA800138599 /* CustomizeView.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
+				0418E8912C08566600138599 /* Hat.swift in Sources */,
 				040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
