@@ -8,17 +8,7 @@
 import SwiftUI
 
 
-class ProgressViewModel: ObservableObject {
-    @Published var hunger: Int = 5
-    @Published var cleanliness: Int = 5
-    @Published var happiness: Int = 5
-    @Published var energy: Int = 5
-    
-    @Published var maxHunger: Int = 10
-    @Published var maxCleanliness: Int = 10
-    @Published var maxHappiness: Int = 10
-    @Published var maxEnergy: Int = 10
-}
+
 
 struct UpgradeItem: Identifiable {
     let id = UUID()
