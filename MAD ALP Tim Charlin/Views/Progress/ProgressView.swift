@@ -22,6 +22,7 @@ import SwiftUI
 
 struct ProgressView: View {
     @StateObject private var tamagochi = Tamagochi()
+    @StateObject private var tamagotchi = Tamagochi()
     
     @State private var currentDate = Date.now
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -108,7 +109,8 @@ struct ProgressView: View {
                         tamagochi.rest(amount: 100)
                     }
                 }) {
-                    Text("Rest \(!tamagochi.energy.isFull)")
+                    Text("Rest")
+//                    Text("Rest \(!tamagochi.energy.isFull)")
                 }
                 .padding()
                 .background(Color.purple)
@@ -117,36 +119,22 @@ struct ProgressView: View {
             }
             .padding()
             
-//            Text("Shop")
-//                .padding()
-//                .background(Color.orange)
-//                .foregroundColor(.white)
-//                .cornerRadius(10)
-//                .onTapGesture {
-//                    self.isClickedToShop = true
-//                }
-//                .fullScreenCover(isPresented: $isClickedToShop) {
-//                    Content_View()
-//                }
-
+            Text("Shop")
+            .padding()
+            .background(Color.orange)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .onTapGesture {
+                self.isClickedToShop = true
+            }
+            .fullScreenCover(isPresented: $isClickedToShop) {
+                ShopView(tamagotchi: tamagotchi)
+            }
             Spacer()
         }
         .onReceive(defaultTimer) { _ in
             tamagochi.minusBars(by: 200)
         }
-//        .onReceive(hungerTimer) { _ in
-//            if progressModel.hunger > 0 { progressModel.hunger -= 1 }
-//        }
-//        .onReceive(cleanlinessTimer) { _ in
-//            if progressModel.cleanliness > 0 { progressModel.cleanliness -= 1 }
-//        }
-//        .onReceive(happinessTimer) { _ in
-//            if progressModel.happiness > 0 { progressModel.happiness -= 1 }
-//        }
-//        .onReceive(energyTimer) { _ in
-//            if progressModel.energy > 0 { progressModel.energy -= 1 }
-//        }
-        
     }
 }
 

@@ -7,66 +7,63 @@
 
 import SwiftUI
 
-
-
-
 struct UpgradeItem: Identifiable {
     let id = UUID()
     let name: String
     let cost: Int
-//    let effect: (ProgressViewModel) -> Void
+    let statKeyPath: ReferenceWritableKeyPath<Tamagochi, Stat>
+    let increaseAmount: Int
 }
 
 struct ShopView: View {
-    @State private var coins: Int = 10000
+    @ObservedObject var tamagotchi: Tamagochi
     @State private var isClickedToBack: Bool = false
     
-//    @State private var upgradeItems: [UpgradeItem] = [
-//        UpgradeItem(name: "Speed Boost", cost: 200, effect: { $0.maxHunger += 90 }),
-//        UpgradeItem(name: "Double Points", cost: 300, effect: { $0.maxCleanliness += 90 }),
-//        UpgradeItem(name: "Extra Life", cost: 400, effect: { $0.maxHappiness += 90 }),
-//        UpgradeItem(name: "Invincibility", cost: 500, effect: { $0.maxEnergy += 90 })
-//    ]
-
+    let upgradeItems: [UpgradeItem] = [
+        UpgradeItem(name: "Increase Hunger Max", cost: 200, statKeyPath: \.hunger, increaseAmount: 600),
+        UpgradeItem(name: "Increase Cleanliness Max", cost: 300, statKeyPath: \.cleanliness, increaseAmount: 600),
+        UpgradeItem(name: "Increase Fun Max", cost: 400, statKeyPath: \.fun, increaseAmount: 600),
+        UpgradeItem(name: "Increase Energy Max", cost: 500, statKeyPath: \.energy, increaseAmount: 600)
+    ]
+    
     var body: some View {
         NavigationView {
             VStack {
-                Text("Coins: \(coins)")
+                Text("Coins: \(tamagotchi.coins)")
                     .font(.title)
                     .padding()
 
-//                ScrollView {
-//                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-//                        ForEach(upgradeItems) { item in
-//                            VStack {
-//                                Text(item.name)
-//                                    .font(.headline)
-//                                Text("\(item.cost) Coins")
-//                                    .font(.subheadline)
-//                                Button(action: {
-//                                    if coins >= item.cost {
-//                                        coins -= item.cost
-//                                    }
-//                                }) {
-//                                    Text("Buy")
-//                                        .padding()
-//                                        .background(Color.blue)
-//                                        .foregroundColor(.white)
-//                                        .cornerRadius(10)
-//                                }
-//                                .disabled(coins < item.cost)
-//                            }
-//                            .padding()
-//                            .background(Color.gray.opacity(0.2))
-//                            .cornerRadius(10)
-//                        }
-//                    }
-//                    .padding()
-//                }
-//                .navigationTitle("Shop - Upgrade")
-//                .padding()
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                        ForEach(upgradeItems) { item in
+                            VStack {
+                                Text(item.name)
+                                    .font(.headline)
+                                Text("\(item.cost) Coins")
+                                    .font(.subheadline)
+                                Button(action: {
+                                    tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: item.increaseAmount)
+                                }) {
+                                    Text("Buy")
+                                        .padding()
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
+                                }
+                                .disabled(tamagotchi.coins < item.cost)
+                            }
+                            .padding()
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(10)
+                        }
+                    }
+                    .padding()
+                }
+                .navigationTitle("Shop - Upgrade")
+                .padding()
                 
                 Text("Back")
+                    .padding()
                     .background(Color.orange)
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -84,7 +81,7 @@ struct ShopView: View {
 struct Content_View: View {
     var body: some View {
         TabView {
-            ShopView()
+            ShopView(tamagotchi: Tamagochi())
                 .tabItem {
                     Label("Upgrade", systemImage: "arrow.up.circle")
                 }

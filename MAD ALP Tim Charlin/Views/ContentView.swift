@@ -23,8 +23,23 @@ import SwiftUI
 //}
 
 struct ContentView: View {
+    @StateObject private var tamagotchi = Tamagochi()
+    
     var body: some View {
-        ShopView()
+        TabView {
+            ShopView(tamagotchi: tamagotchi)
+                .tabItem {
+                    Label("Upgrade", systemImage: "arrow.up.circle")
+                }
+            Text("Accessories Page")
+                .tabItem {
+                    Label("Accessories", systemImage: "star.circle")
+                }
+            Text("Gacha Page")
+                .tabItem {
+                    Label("Gacha", systemImage: "gift.circle")
+                }
+        }
     }
 }
 
