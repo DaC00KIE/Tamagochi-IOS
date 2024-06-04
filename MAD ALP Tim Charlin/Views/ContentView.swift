@@ -27,7 +27,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            ShopView(tamagotchi: tamagotchi)
+            Upgrade_Item(tamagotchi: tamagotchi)
                 .tabItem {
                     Label("Upgrade", systemImage: "arrow.up.circle")
                 }

@@ -15,9 +15,9 @@ struct UpgradeItem: Identifiable {
     let increaseAmount: Int
 }
 
-struct ShopView: View {
+struct Upgrade_Item: View {
+    @State private var navigateToProgressView = false
     @ObservedObject var tamagotchi: Tamagochi
-    @State private var isClickedToBack: Bool = false
     
     let upgradeItems: [UpgradeItem] = [
         UpgradeItem(name: "Increase Hunger Max", cost: 200, statKeyPath: \.hunger, increaseAmount: 600),
@@ -27,76 +27,83 @@ struct ShopView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Coins: \(tamagotchi.coins)")
-                    .font(.title)
-                    .padding()
-
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                        ForEach(upgradeItems) { item in
-                            VStack {
-                                Text(item.name)
-                                    .font(.headline)
-                                Text("\(item.cost) Coins")
-                                    .font(.subheadline)
-                                Button(action: {
-                                    tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: item.increaseAmount)
-                                }) {
-                                    Text("Buy")
-                                        .padding()
-                                        .background(Color.blue)
-                                        .foregroundColor(.white)
-                                        .cornerRadius(10)
-                                }
-                                .disabled(tamagotchi.coins < item.cost)
-                            }
-                            .padding()
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(10)
-                        }
-                    }
-                    .padding()
-                }
-                .navigationTitle("Shop - Upgrade")
-                .padding()
-                
-                Text("Back")
-                    .padding()
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .onTapGesture {
-                        self.isClickedToBack = true
-                    }
-                    .fullScreenCover(isPresented: $isClickedToBack) {
-                        ProgressView()
-                    }
-            }
-        }
-    }
-}
-
-struct Content_View: View {
-    var body: some View {
         TabView {
-            ShopView(tamagotchi: Tamagochi())
+            ProgressView()
                 .tabItem {
-                    Label("Upgrade", systemImage: "arrow.up.circle")
+                    Label("Progress", systemImage: "hourglass.tophalf.fill")
                 }
+            NavigationView {
+                VStack {
+                    Text("Coins: \(tamagotchi.coins)")
+                        .font(.title)
+                        .padding()
+                    
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                            ForEach(upgradeItems) { item in
+                                VStack {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    Text("\(item.cost) Coins")
+                                        .font(.subheadline)
+                                    Button(action: {
+                                        tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: item.increaseAmount)
+                                    }) {
+                                        Text("Buy")
+                                            .padding()
+                                            .background(Color.blue)
+                                            .foregroundColor(.white)
+                                            .cornerRadius(10)
+                                    }
+                                    .disabled(tamagotchi.coins < item.cost)
+                                }
+                                .padding()
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(10)
+                            }
+                        }
+                        .padding()
+                    }
+                    .navigationTitle("Upgrade")
+                    .padding()
+                }
+//                .navigationBarItems(leading: backButton)
+//                .background(
+//                    NavigationLink(
+//                        destination: ProgressView().navigationTitle("Loading..."),
+//                        isActive: $navigateToProgressView,
+//                        label: { EmptyView() }
+//                    )
+//                )
+            }
+            .tabItem {
+                Label("Upgrade", systemImage: "arrow.up.circle")
+            }
+            
             Text("Accessories Page")
                 .tabItem {
                     Label("Accessories", systemImage: "star.circle")
                 }
+            
             Text("Gacha Page")
                 .tabItem {
                     Label("Gacha", systemImage: "gift.circle")
                 }
         }
     }
+    
+    var backButton: some View {
+            Button(action: {
+                navigateToProgressView = true
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                    Text("Back")
+                }
+            }
+        }
 }
 
 #Preview {
-    Content_View()
+    Upgrade_Item(tamagotchi: Tamagochi())
 }

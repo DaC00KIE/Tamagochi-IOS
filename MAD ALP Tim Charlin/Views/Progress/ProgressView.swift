@@ -119,18 +119,18 @@ struct ProgressView: View {
             }
             .padding()
             
-            Text("Shop")
-            .padding()
-            .background(Color.orange)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .onTapGesture {
-                self.isClickedToShop = true
-            }
-            .fullScreenCover(isPresented: $isClickedToShop) {
-                ShopView(tamagotchi: tamagotchi)
-            }
-            Spacer()
+//            Text("Shop")
+//            .padding()
+//            .background(Color.orange)
+//            .foregroundColor(.white)
+//            .cornerRadius(10)
+//            .onTapGesture {
+//                self.isClickedToShop = true
+//            }
+//            .fullScreenCover(isPresented: $isClickedToShop) {
+//                Upgrade_Item(tamagotchi: tamagotchi)
+//            }
+//            Spacer()
         }
         .onReceive(defaultTimer) { _ in
             tamagochi.minusBars(by: 200)
