@@ -18,6 +18,7 @@ struct UpgradeItem: Identifiable {
 }
 
 struct ShopView: View {
+    @State var tamagochi: Tamagochi
     @State private var coins: Int = 10000
     @State private var isClickedToBack: Bool = false
     
@@ -74,7 +75,7 @@ struct ShopView: View {
                         self.isClickedToBack = true
                     }
                     .fullScreenCover(isPresented: $isClickedToBack) {
-                        ProgressView()
+                        ProgressView(tamagochi: tamagochi)
                     }
             }
         }
@@ -82,9 +83,11 @@ struct ShopView: View {
 }
 
 struct Content_View: View {
+    @State var tamagochi: Tamagochi
+    
     var body: some View {
         TabView {
-            ShopView()
+            ShopView(tamagochi: tamagochi)
                 .tabItem {
                     Label("Upgrade", systemImage: "arrow.up.circle")
                 }
@@ -101,5 +104,6 @@ struct Content_View: View {
 }
 
 #Preview {
-    Content_View()
+    @State var pet = Tamagochi()
+    return Content_View(tamagochi: pet)
 }
