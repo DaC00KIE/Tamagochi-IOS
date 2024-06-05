@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-
-
-//struct ContentView: View {
-//    var body: some View {
-//        /*VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
-//            Text("Hello, world!")
-//        }
-//        .padding()*/
-//        ProfileTextContainer(titleText: "Username", text:"Video")
-//    }
-//}
-
 struct ContentView: View {
     @State var tamagochi: Tamagochi
     @State var selectedTab = 0

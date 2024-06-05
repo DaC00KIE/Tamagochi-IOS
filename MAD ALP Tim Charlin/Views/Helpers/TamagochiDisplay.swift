@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TamagochiDisplay: View {
-    @StateObject var tamagochi: Tamagochi
+    @ObservedObject var tamagochi: Tamagochi
     var frame: Int
     private var frameSize: CGFloat{
         return CGFloat(frame)
