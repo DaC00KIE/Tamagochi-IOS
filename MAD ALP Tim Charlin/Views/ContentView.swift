@@ -23,6 +23,7 @@ import SwiftUI
 //}
 
 struct ContentView: View {
+<<<<<<< HEAD
     @StateObject private var tamagotchi = Tamagochi()
     
     var body: some View {
@@ -48,8 +49,41 @@ struct ContentView: View {
 //        ContentView()
 //    }
 //}
+=======
+    @State var tamagochi: Tamagochi
+    @State var selectedTab = 0
+    
+    var body: some View {
+        TabView(selection: $selectedTab){
+            ProgressView(tamagochi: tamagochi)
+                .tabItem{
+                    Image("icon_home_outlined")
+                    Text("Home")
+                }
+                .tag(0)
+            
+            ShopView(tamagochi: tamagochi)
+                .tabItem{
+                    Image("icon_upgrade_outlined")
+                    Text("Shop")
+                }
+                .tag(1)
+            
+            CustomizeView(tamagochi: tamagochi)
+                .tabItem{
+                    Image("icon_outfit_outlined")
+                    Text("Outfits")
+                }
+                .tag(2)
+        }
+        
+       
+    }
+}
+>>>>>>> main-backup
 
 #Preview {
-    ContentView()
+    @State var pet = Tamagochi()
+    return ContentView(tamagochi: pet)
 }
 

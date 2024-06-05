@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProgressBar: View {
     @Binding var stat: Stat
+    var frameWidth: Int
     
     private var value: Int{
         return stat.value
@@ -18,29 +19,27 @@ struct ProgressBar: View {
         return stat.max
     }
     
-    var percentage: Int{
-        guard max > 0 else { return 0 }
-        let percentage = Double(value) / Double(max) * 100
-        return Int(round(percentage))
+    private var percentage: Int{
+        return stat.percentage
     }
     
     var body: some View {
         ZStack(alignment: .leading) {
             Rectangle()
-                .frame(width: 100, height: 20)
+                .frame(width: CGFloat(frameWidth), height: 20)
                 .opacity(0.3)
                 .foregroundColor(Color.gray)
             
             Rectangle()
-                .frame(width: CGFloat(value) / CGFloat(max) * 100, height: 20)
+                .frame(width: CGFloat(value) / CGFloat(max) * CGFloat(frameWidth), height: 20)
                 .foregroundColor(progressColor)
             
             HStack(alignment: .center) {
 //              Spacer() // Pushes the text view to the center
-              Text("\(percentage)%") // Displays hunger percentage
+              Text("\(value)/ \(max)") // Displays hunger percentage
                 .foregroundColor(.black)
                 .font(.system(size: 10)) // Adjust font size as needed
-                .frame(maxWidth: 100, alignment: .center)
+                .frame(maxWidth: CGFloat(frameWidth), alignment: .center)
 //              Spacer() // Pushes the text view to the center
             }
         }
@@ -61,6 +60,6 @@ struct ProgressBar: View {
 }
 
 #Preview {
-    @State var stat = Stat(value: 41, max: 200)
-    return ProgressBar(stat: $stat)
+    @State var stat = Stat(value: 100, max: 200)
+    return ProgressBar(stat: $stat, frameWidth: 200)
 }

@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 
+//@State private var characterImage = UIImage(named: "character")! // Replace with your character image
+//@State private var faceImage: UIImage?
+//@State private var hatImage: UIImage?
+//@State private var selectedFace: String = "Default_face"
+//@State private var selectedHat: String = "none"
+
 class Tamagochi: ObservableObject{
     var name: String
     var maxH: Int = 100
@@ -23,6 +29,7 @@ class Tamagochi: ObservableObject{
     @Published var energy: Stat
     @Published var coins: Int
     
+<<<<<<< HEAD
     init() {
         self.name = "Pet"
         self.health = Stat(value: 100, max: self.maxH)
@@ -31,6 +38,19 @@ class Tamagochi: ObservableObject{
         self.fun = Stat(value: 1800, max: self.maxFun)
         self.energy = Stat(value: 1800, max: self.maxEnergy)
         self.coins = 10000
+=======
+    @Published var characterImage: UIImage
+    @Published var faceImage: UIImage? = UIImage(named:"Default_face")
+    @Published var hatImage: UIImage? = UIImage(named:"none")
+    @Published var selectedFace: String
+    @Published var selectedHat: String
+    
+    init(){
+        self.name = "Default Name"
+        self.characterImage = UIImage(named: "character")!
+        self.selectedFace = "face_default"
+        self.selectedHat = "hat_none"
+>>>>>>> main-backup
     }
     
     func eat(amount: Int) {
@@ -79,8 +99,19 @@ struct Stat {
     var value: Int
     var max: Int
     
+<<<<<<< HEAD
     var isFull: Bool {
         if value < max {
+=======
+    var percentage: Int{
+        guard max > 0 else { return 0 }
+        let percentage = Double(value) / Double(max) * 100
+        return Int(round(percentage))
+    }
+    
+    var isFull: Bool{
+        if value < max{
+>>>>>>> main-backup
             return false
         }
         return true
