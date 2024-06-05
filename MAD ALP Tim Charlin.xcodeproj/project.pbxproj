@@ -22,6 +22,7 @@
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
+		65546AFE2C10B2FB0057A053 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65546AFD2C10B2FB0057A053 /* ColorPickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		65546AFD2C10B2FB0057A053 /* ColorPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				040E41272BF5D34400358910 /* ContentView.swift */,
+				65546AFF2C10BBAF0057A053 /* ColorPicker */,
 				04112AFE2C10008300F7F134 /* Helpers */,
 				04112AF32C0F7CC400F7F134 /* Customize */,
 				04C996372C0F0FD6000F479A /* Shop */,
@@ -162,6 +165,14 @@
 				04C996382C0F0FF4000F479A /* ProgressBar.swift */,
 			);
 			path = Progress;
+			sourceTree = "<group>";
+		};
+		65546AFF2C10BBAF0057A053 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				65546AFD2C10B2FB0057A053 /* ColorPickerController.swift */,
+			);
+			path = ColorPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
+				65546AFE2C10B2FB0057A053 /* ColorPickerController.swift in Sources */,
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,

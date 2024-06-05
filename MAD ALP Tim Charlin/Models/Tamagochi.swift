@@ -29,11 +29,15 @@ class Tamagochi: ObservableObject{
     @Published var selectedFace: String
     @Published var selectedHat: String
     
+    var skinColor: UIColor = .red
+    
     init(){
         self.name = "Default Name"
         self.characterImage = UIImage(named: "character")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
+        
+        self.skinColor = UIColor.systemRed
     }
     
     func eat(amount: Int) {
