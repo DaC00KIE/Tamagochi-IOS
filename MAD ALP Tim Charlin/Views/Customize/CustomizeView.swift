@@ -12,6 +12,7 @@ struct CustomizeView: View {
     
     var faces: [String] = ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"]
     var hats: [String] = ["hat_none", "hat_christmas", "hat_mexican"]
+    var colour: [String] = ["", "", ""]
     
     var body: some View {
         VStack {
