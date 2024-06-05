@@ -67,14 +67,6 @@ struct Upgrade_Item: View {
                     .navigationTitle("Upgrade")
                     .padding()
                 }
-//                .navigationBarItems(leading: backButton)
-//                .background(
-//                    NavigationLink(
-//                        destination: ProgressView().navigationTitle("Loading..."),
-//                        isActive: $navigateToProgressView,
-//                        label: { EmptyView() }
-//                    )
-//                )
             }
             .tabItem {
                 Label("Upgrade", systemImage: "arrow.up.circle")
@@ -93,15 +85,15 @@ struct Upgrade_Item: View {
     }
     
     var backButton: some View {
-            Button(action: {
-                navigateToProgressView = true
-            }) {
-                HStack {
-                    Image(systemName: "arrow.left")
-                    Text("Back")
-                }
+        Button(action: {
+            navigateToProgressView = true
+        }) {
+            HStack {
+                Image(systemName: "arrow.left")
+                Text("Back")
             }
         }
+    }
 }
 
 #Preview {

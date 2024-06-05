@@ -46,7 +46,7 @@ struct ProgressView: View {
                     ProgressBar(stat: $tamagochi.hunger)
                 }
                 VStack {
-                    Text("Cleanliness")
+                    Text("Cleanliness \(tamagochi.cleanliness.value)")
                     ProgressBar(stat: $tamagochi.cleanliness)
                 }
             }
@@ -54,11 +54,11 @@ struct ProgressView: View {
             
             HStack {
                 VStack {
-                    Text("Fun")
+                    Text("Fun \(tamagochi.fun.value)")
                     ProgressBar(stat: $tamagochi.fun)
                 }
                 VStack {
-                    Text("Energy")
+                    Text("Energy \(tamagochi.energy.value)")
                     ProgressBar(stat: $tamagochi.energy)
                 }
             }
