@@ -12,9 +12,6 @@ struct ProgressView: View {
     
     @State private var currentDate = Date.now
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-    
-    @State private var isClickedToShop: Bool = false
     
     let defaultTimer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     let defaultFrameWidth = 100
@@ -32,7 +29,6 @@ struct ProgressView: View {
                         Text("Health")
                         ProgressBar(stat: $tamagochi.health, frameWidth: defaultFrameWidth * 2 + 40)
                     }
-                    
                     Spacer()
                 }
             }
@@ -50,7 +46,8 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.hunger.isFull {
-                                tamagochi.eat(amount: 100)
+                                tamagochi.eat(amount: 360)
+                                
                             }
                         }) {
                             Text("Feed")
@@ -69,7 +66,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.cleanliness.isFull {
-                                tamagochi.clean(amount: 100)
+                                tamagochi.clean(amount: 360)
                             }
                         }) {
                             Text("Clean")
@@ -90,7 +87,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.fun.isFull{
-                                tamagochi.play(amount: 100)
+                                tamagochi.play(amount: 360)
                             }
                         }) {
                             Text("Play")
@@ -108,7 +105,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.energy.isFull{
-                                tamagochi.rest(amount: 100)
+                                tamagochi.rest(amount: 360)
                             }
                         }) {
                             Text("Rest")
