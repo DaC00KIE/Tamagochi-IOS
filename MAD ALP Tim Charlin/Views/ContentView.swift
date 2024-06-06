@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 //struct ContentView: View {
 //    var body: some View {
 //        /*VStack {
@@ -38,7 +36,7 @@ struct ContentView: View {
                     SoundManager.inst.play(sound: .Tab)
                 }
             
-            ShopView(tamagochi: tamagochi)
+            ShopView(tamagotchi: tamagochi)
                 .tabItem{
                     Image("icon_upgrade_outlined")
                     Text("Shop")

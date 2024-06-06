@@ -23,6 +23,7 @@
 		04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8C2C1176E800DAB420 /* Assets.xcassets */; };
 		04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */; };
 		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14221A5F2C118448001A6FE1 /* AccessoriesView.swift */; };
 		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
 		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
@@ -76,6 +77,7 @@
 		04DC6D8A2C1176E600DAB420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04DC6D8C2C1176E800DAB420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14221A5F2C118448001A6FE1 /* AccessoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesView.swift; sourceTree = "<group>"; };
 		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
@@ -132,7 +134,6 @@
 				04C996332C0EEE80000F479A /* Models */,
 				04C996342C0EEE85000F479A /* Resources */,
 				040E41292BF5D34500358910 /* Assets.xcassets */,
-				040E412B2BF5D34500358910 /* Preview Content */,
 			);
 			path = "MAD ALP Tim Charlin";
 			sourceTree = "<group>";
@@ -187,6 +188,7 @@
 		04C996342C0EEE85000F479A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				040E412B2BF5D34500358910 /* Preview Content */,
 				04112AFB2C0FA02700F7F134 /* DataManager.swift */,
 			);
 			path = Resources;
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				14456E402C08417F00F24E96 /* ShopView.swift */,
+				14221A5F2C118448001A6FE1 /* AccessoriesView.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
+				14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,

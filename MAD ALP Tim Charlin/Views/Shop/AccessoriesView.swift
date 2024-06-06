@@ -2,17 +2,19 @@
 //  AccessoriesView.swift
 //  MAD ALP Tim Charlin
 //
-//  Created by Charlin Leo on 06/06/24.
+//  Created by Charlin Leo on 05/06/24.
 //
 
 import SwiftUI
 
 struct AccessoriesView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Accessories Shop")
+                .font(.title)
+                .padding()
+            // Add accessories items here
+        }
+        .padding()
     }
-}
-
-#Preview {
-    AccessoriesView()
 }

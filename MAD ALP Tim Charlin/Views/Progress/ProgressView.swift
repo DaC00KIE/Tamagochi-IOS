@@ -2,7 +2,7 @@
 //  ProgressView.swift
 //  MAD ALP Tim Charlin
 //
-//  Created by MacBook Pro on 30/05/24.
+//  Created by Charlin Leo on 30/05/24.
 //
 
 import SwiftUI
@@ -142,10 +142,7 @@ struct ProgressView: View {
             .onReceive(defaultTimer) { _ in
                 tamagochi.minusBars(by: 200)
             }
-            
         }
-        
-        
     }
 }
 
