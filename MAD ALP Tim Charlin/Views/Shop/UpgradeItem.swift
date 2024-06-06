@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct UpgradeItem: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    UpgradeItem()
+struct upgradeItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let description: String
+    let imageName: String
+    let cost: Int
+    let statKeyPath: ReferenceWritableKeyPath<Tamagochi, Stat>
+    let type: String
 }

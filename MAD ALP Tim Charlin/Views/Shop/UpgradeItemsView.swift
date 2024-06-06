@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct UpgradeItemsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+import SwiftUI
 
-#Preview {
-    UpgradeItemsView()
+struct UpgradeItemsView: View {
+    @ObservedObject var tamagotchi: Tamagochi
+    let upgradeItems: [UpgradeItem]
+    
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                ForEach(upgradeItems) { item in
+                    UpgradeItemView(tamagotchi: tamagotchi, item: item)
+                }
+            }
+            .padding()
+        }
+    }
 }

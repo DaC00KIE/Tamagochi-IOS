@@ -34,14 +34,14 @@ struct ShopView: View {
                     description: "Enhances the effectiveness of feeding, increasing the amount of hunger satisfaction gained from each feeding.",
                     imageName: "feed",
                     cost: 400,
-                    statKeyPath: \.fun,
+                    statKeyPath: \.hunger,
                     type: "Action"),
         
         UpgradeItem(name: "Increase Hunger Resistance",
                     description: "Improves the pet's resistance to hunger, decreasing the rate at which it becomes hungry.",
                     imageName: "hunger",
                     cost: 500,
-                    statKeyPath: \.energy,
+                    statKeyPath: \.hunger,
                     type: "Timer"),
         
         UpgradeItem(name: "Increase Cleanliness Max",
@@ -55,14 +55,14 @@ struct ShopView: View {
                     description: "Increases the amount of cleanliness restored when the pet is cleaned, making each cleaning session more effective.",
                     imageName: "feed",
                     cost: 400,
-                    statKeyPath: \.fun,
+                    statKeyPath: \.cleanliness,
                     type: "Action"),
         
         UpgradeItem(name: "Increase Clean Resistance",
                     description: "Boosts the pet's resistance to becoming dirty, reducing the frequency of cleanliness deterioration.",
                     imageName: "hunger",
                     cost: 500,
-                    statKeyPath: \.energy,
+                    statKeyPath: \.cleanliness,
                     type: "Timer"),
         
         UpgradeItem(name: "Increase Fun Max",
@@ -83,7 +83,7 @@ struct ShopView: View {
                     description: "Improves the pet's resistance to boredom, decreasing the rate at which it loses fun.",
                     imageName: "hunger",
                     cost: 500,
-                    statKeyPath: \.energy,
+                    statKeyPath: \.fun,
                     type: "Timer"),
         
         UpgradeItem(name: "Increase Energy Max",
@@ -97,7 +97,7 @@ struct ShopView: View {
                     description: "Boosts the amount of energy restored when the pet rests, making each rest period more rejuvenating.",
                     imageName: "feed",
                     cost: 400,
-                    statKeyPath: \.fun,
+                    statKeyPath: \.energy,
                     type: "Action"),
         
         UpgradeItem(name: "Increase Energy Resistance",
@@ -111,78 +111,12 @@ struct ShopView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Shop")
-                    .font(.title)
-                Text("Coins: \(tamagotchi.coins)")
-                    .font(.title)
-                    .padding()
-                
-                HStack {
-                    Button(action: {
-                        selectedShop = "Upgrade"
-                    }) {
-                        Text("Upgrade")
-                            .padding()
-                            .background(selectedShop == "Upgrade" ? Color.blue : Color.gray)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    
-                    Button(action: {
-                        selectedShop = "Accessories"
-                    }) {
-                        Text("Accessories")
-                            .padding()
-                            .background(selectedShop == "Accessories" ? Color.blue : Color.gray)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                }
-                .padding()
-                
+                ShopHeaderView(coins: tamagotchi.coins)
+                ShopSelectionView(selectedShop: $selectedShop)
                 if selectedShop == "Upgrade" {
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            ForEach(upgradeItems) { item in
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Image(item.imageName)
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                            .padding(.trailing, 10)
-                                        VStack(alignment: .leading) {
-                                            Text(item.name)
-                                                .font(.headline)
-                                            Text(item.description)
-                                                .font(.subheadline)
-                                        }
-                                        VStack {
-                                            Button(action: {
-                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, type: item.type)
-                                            }) {
-                                                Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
-                                                    .padding()
-                                                    .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(10)
-                                            }
-                                            .disabled(tamagotchi.coins < item.cost)
-                                            Spacer()
-                                            Text("\(item.cost) Coins")
-                                                .font(.subheadline)
-                                        }
-                                    }
-                                    
-                                }
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(10)
-                            }
-                        }
-                        .padding()
-                    }
+                    UpgradeItemsView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
                 } else if selectedShop == "Accessories" {
-                    AccessoriesView()
+                    AccessoriesView(tamagotchi: tamagotchi)
                 }
             }
             .navigationBarTitle("")

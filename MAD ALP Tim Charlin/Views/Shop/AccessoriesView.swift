@@ -27,7 +27,10 @@ struct AccessoriesView: View {
         accessoryItem(name: "Christmas Hat", imageName: "hat_christmas", cost: 200, type: .hat),
         accessoryItem(name: "Mexican Hat", imageName: "hat_mexican", cost: 150, type: .hat),
         accessoryItem(name: "Confused Face", imageName: "face_confused", cost: 75, type: .face),
-        accessoryItem(name: "Creeper Face", imageName: "face_creeper", cost: 100, type: .face)
+        accessoryItem(name: "Creeper Face", imageName: "face_creeper", cost: 100, type: .face),
+        accessoryItem(name: "Derpy Face", imageName: "face_derpy", cost: 150, type: .face),
+        accessoryItem(name: "Happy Face", imageName: "face_happy", cost: 75, type: .face),
+        accessoryItem(name: "Wooper Face", imageName: "face_wooper", cost: 200, type: .face),
     ]
     
     var body: some View {

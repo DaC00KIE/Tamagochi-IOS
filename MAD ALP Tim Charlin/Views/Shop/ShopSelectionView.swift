@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ShopSelectionView: View {
+    @Binding var selectedShop: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Button(action: {
+                selectedShop = "Upgrade"
+            }) {
+                Text("Upgrade")
+                    .padding()
+                    .background(selectedShop == "Upgrade" ? Color.blue : Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            
+            Button(action: {
+                selectedShop = "Accessories"
+            }) {
+                Text("Accessories")
+                    .padding()
+                    .background(selectedShop == "Accessories" ? Color.blue : Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+        }
+        .padding()
     }
-}
-
-#Preview {
-    ShopSelectionView()
 }

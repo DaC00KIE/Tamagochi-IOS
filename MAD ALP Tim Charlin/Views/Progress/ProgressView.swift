@@ -50,7 +50,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.hunger.isFull {
-                                tamagochi.eat(amount: 100)
+                                tamagochi.eat(amount: tamagochi.eatAmount)
                             }
                         }) {
                             Text("Feed")
@@ -69,7 +69,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.cleanliness.isFull {
-                                tamagochi.clean(amount: 100)
+                                tamagochi.clean(amount: tamagochi.cleanAmount)
                             }
                         }) {
                             Text("Clean")
@@ -90,7 +90,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.fun.isFull{
-                                tamagochi.play(amount: 100)
+                                tamagochi.play(amount: tamagochi.playAmount)
                             }
                         }) {
                             Text("Play")

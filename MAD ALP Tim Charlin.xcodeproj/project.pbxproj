@@ -25,6 +25,11 @@
 		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14221A5F2C118448001A6FE1 /* AccessoriesView.swift */; };
 		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
+		1467A3682C11C3EC00FA0D4C /* UpgradeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467A3672C11C3EC00FA0D4C /* UpgradeItem.swift */; };
+		1467A36A2C11C43300FA0D4C /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467A3692C11C43300FA0D4C /* ShopHeaderView.swift */; };
+		1467A36C2C11C45800FA0D4C /* ShopSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467A36B2C11C45800FA0D4C /* ShopSelectionView.swift */; };
+		1467A36E2C11C47A00FA0D4C /* UpgradeItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467A36D2C11C47A00FA0D4C /* UpgradeItemsView.swift */; };
+		1467A3702C11C4A300FA0D4C /* UpgradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1467A36F2C11C4A300FA0D4C /* UpgradeItemView.swift */; };
 		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
 		3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA92C11722C009C1290 /* Failed.wav */; };
@@ -79,6 +84,11 @@
 		04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14221A5F2C118448001A6FE1 /* AccessoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesView.swift; sourceTree = "<group>"; };
 		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		1467A3672C11C3EC00FA0D4C /* UpgradeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeItem.swift; sourceTree = "<group>"; };
+		1467A3692C11C43300FA0D4C /* ShopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
+		1467A36B2C11C45800FA0D4C /* ShopSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSelectionView.swift; sourceTree = "<group>"; };
+		1467A36D2C11C47A00FA0D4C /* UpgradeItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeItemsView.swift; sourceTree = "<group>"; };
+		1467A36F2C11C4A300FA0D4C /* UpgradeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeItemView.swift; sourceTree = "<group>"; };
 		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
 		3FCA8EA92C11722C009C1290 /* Failed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Failed.wav; sourceTree = "<group>"; };
@@ -200,6 +210,11 @@
 			children = (
 				14456E402C08417F00F24E96 /* ShopView.swift */,
 				14221A5F2C118448001A6FE1 /* AccessoriesView.swift */,
+				1467A3672C11C3EC00FA0D4C /* UpgradeItem.swift */,
+				1467A3692C11C43300FA0D4C /* ShopHeaderView.swift */,
+				1467A36B2C11C45800FA0D4C /* ShopSelectionView.swift */,
+				1467A36D2C11C47A00FA0D4C /* UpgradeItemsView.swift */,
+				1467A36F2C11C4A300FA0D4C /* UpgradeItemView.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -367,11 +382,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
+				1467A36C2C11C45800FA0D4C /* ShopSelectionView.swift in Sources */,
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
+				1467A3682C11C3EC00FA0D4C /* UpgradeItem.swift in Sources */,
 				14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */,
+				1467A3702C11C4A300FA0D4C /* UpgradeItemView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
+				1467A36E2C11C47A00FA0D4C /* UpgradeItemsView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
+				1467A36A2C11C43300FA0D4C /* ShopHeaderView.swift in Sources */,
 				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
 				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,

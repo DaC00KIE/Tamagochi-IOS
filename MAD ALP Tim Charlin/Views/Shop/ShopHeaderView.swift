@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ShopHeaderView: View {
+    var coins: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Shop")
+                .font(.title)
+            Text("Coins: \(coins)")
+                .font(.title)
+                .padding()
+        }
     }
-}
-
-#Preview {
-    ShopHeaderView()
 }
