@@ -10,10 +10,6 @@ import SwiftUI
 struct ProgressView: View {
     @StateObject var tamagochi: Tamagochi
     
-    @State private var currentDate = Date.now
-        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    let defaultTimer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     let defaultFrameWidth = 100
     
     var body: some View {
@@ -121,23 +117,9 @@ struct ProgressView: View {
                 }
                 .padding(.bottom, 50)
                 
-    //            Text("Shop")
-    //                .padding()
-    //                .frame(width: CGFloat(defaultFrameWidth) * 2 + 40)
-    //                .background(Color.orange)
-    //                .foregroundColor(.white)
-    //                .cornerRadius(10)
-    //                .onTapGesture {
-    //                    self.isClickedToShop = true
-    //                }
-    //                .fullScreenCover(isPresented: $isClickedToShop) {
-    //                    Content_View(tamagochi: tamagochi)
-    //                }
-
-//                Spacer()
             }
             .padding(.top, -60)
-            .onReceive(defaultTimer) { _ in
+            .onReceive(tamagochi.timer) { _ in
                 tamagochi.minusBars(by: 200)
             }
             

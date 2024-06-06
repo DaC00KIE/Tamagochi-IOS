@@ -25,6 +25,21 @@ struct Stat{
         return true
     }
     
+    var action: String{
+        switch type{
+        case .fun:
+            return "Play"
+        case .hunger:
+            return "Feed"
+        case .cleanliness:
+            return "Clean"
+        case .energy:
+            return "Rest"
+        default:
+            return ""
+        }
+    }
+    
     mutating func add(_ amount: Int){
         value = min(value + amount, max)
     }

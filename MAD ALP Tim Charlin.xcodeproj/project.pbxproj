@@ -25,6 +25,7 @@
 		048DB33E2C110E7E006EA271 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 048DB3312C110E7B006EA271 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		048DB3452C111139006EA271 /* WatchDisplayTamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */; };
 		048DB3462C11117F006EA271 /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
+		04A1DAA72C11FDB100532568 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DAA62C11FDB100532568 /* ButtonAction.swift */; };
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
 		04DC6D722C11155A00DAB420 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
@@ -83,6 +84,7 @@
 		048DB3372C110E7E006EA271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048DB33A2C110E7E006EA271 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDisplayTamagochi.swift; sourceTree = "<group>"; };
+		04A1DAA62C11FDB100532568 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		04DC6D732C11181A00DAB420 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
@@ -192,13 +194,22 @@
 		048DB3432C11111B006EA271 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */,
-				04DC6D732C11181A00DAB420 /* StatView.swift */,
+				04A1DAA52C11FD7C00532568 /* Helpers */,
 				04DC6D752C1118DD00DAB420 /* HomeView.swift */,
 				04DC6D802C1165EC00DAB420 /* SwitchAccessoryView.swift */,
 			);
 			name = Views;
 			path = Views/Views;
+			sourceTree = "<group>";
+		};
+		04A1DAA52C11FD7C00532568 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */,
+				04DC6D732C11181A00DAB420 /* StatView.swift */,
+				04A1DAA62C11FDB100532568 /* ButtonAction.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		04C996322C0EEE60000F479A /* Views */ = {
@@ -387,6 +398,7 @@
 			files = (
 				04DC6D812C1165EC00DAB420 /* SwitchAccessoryView.swift in Sources */,
 				04DC6D742C11181A00DAB420 /* StatView.swift in Sources */,
+				04A1DAA72C11FDB100532568 /* ButtonAction.swift in Sources */,
 				04DC6D7C2C1139DA00DAB420 /* ScrollableSelectionView.swift in Sources */,
 				04DC6D792C1124FA00DAB420 /* Stat.swift in Sources */,
 				04DC6D762C1118DD00DAB420 /* HomeView.swift in Sources */,

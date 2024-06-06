@@ -34,6 +34,8 @@ struct StatView: View {
                 .padding(.top, -20)
                 .padding(.bottom, -30)
             
+//            Spacer()
+            
             switch statType{
             case .fun:
                 Button(action:{
@@ -49,6 +51,7 @@ struct StatView: View {
 
             default:
                 Text("\(tamagochi.name)")
+                    .padding(.top, 20)
             }
             
 //            Spacer()
@@ -59,5 +62,5 @@ struct StatView: View {
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return StatView(tamagochi: tamagochi, statType: .fun)
+    return StatView(tamagochi: tamagochi, statType: .health)
 }

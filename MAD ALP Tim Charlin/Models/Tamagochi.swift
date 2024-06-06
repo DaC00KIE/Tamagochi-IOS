@@ -25,6 +25,8 @@ class Tamagochi: ObservableObject {
     
     @Published var skinColor: Color
     
+    let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
+    
     init() {
         self.name = "Default Name"
         self.characterImage = UIImage(named: "character")!
