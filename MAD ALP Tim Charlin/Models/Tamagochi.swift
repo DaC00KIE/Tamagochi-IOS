@@ -29,10 +29,10 @@ class Tamagochi: ObservableObject {
     
     init() {
         self.name = "Default Name"
-        self.characterImage = UIImage(named: "character")!
+        self.characterImage = UIImage(named: "character_outline")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
-        self.skinColor = Color.red
+        self.skinColor = Color.blue
     }
     
     func getStat(_ type: StatType) -> Stat{

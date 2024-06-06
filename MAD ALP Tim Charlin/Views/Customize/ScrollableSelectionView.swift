@@ -32,8 +32,9 @@ struct ScrollableSelectionView: View {
                                     .onTapGesture {
                                         withAnimation {
                                             scrollProxy.scrollTo(item, anchor: .center)
+                                            selectedItem = item
                                         }
-                                        selectedItem = item
+//                                        selectedItem = item
                                     }
                                     .onChange(of: isCentered) { newValue in
                                         if newValue {
