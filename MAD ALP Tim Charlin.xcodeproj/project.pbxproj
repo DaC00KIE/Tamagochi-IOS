@@ -18,6 +18,11 @@
 		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
+		04DC6D892C1176E600DAB420 /* WatchTamagochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */; };
+		04DC6D8B2C1176E600DAB420 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D8A2C1176E600DAB420 /* ContentView.swift */; };
+		04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8C2C1176E800DAB420 /* Assets.xcassets */; };
+		04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */; };
+		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
 		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
@@ -28,6 +33,30 @@
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04DC6D912C1176E800DAB420 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040E411A2BF5D34400358910 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DC6D852C1176E600DAB420;
+			remoteInfo = "WatchTamagochi Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04DC6D942C1176E900DAB420 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAD ALP Tim Charlin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +71,11 @@
 		0429AA482C083FFA005E85F4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchTamagochi Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTamagochiApp.swift; sourceTree = "<group>"; };
+		04DC6D8A2C1176E600DAB420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04DC6D8C2C1176E800DAB420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
@@ -61,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DC6D832C1176E600DAB420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				040E41242BF5D34400358910 /* MAD ALP Tim Charlin */,
+				04DC6D872C1176E600DAB420 /* WatchTamagochi Watch App */,
 				040E41232BF5D34400358910 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */,
+				04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +200,25 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		04DC6D872C1176E600DAB420 /* WatchTamagochi Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */,
+				04DC6D8A2C1176E600DAB420 /* ContentView.swift */,
+				04DC6D8C2C1176E800DAB420 /* Assets.xcassets */,
+				04DC6D8E2C1176E800DAB420 /* Preview Content */,
+			);
+			path = "WatchTamagochi Watch App";
+			sourceTree = "<group>";
+		};
+		04DC6D8E2C1176E800DAB420 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		14456E3E2C0840A600F24E96 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,14 +259,33 @@
 				040E411E2BF5D34400358910 /* Sources */,
 				040E411F2BF5D34400358910 /* Frameworks */,
 				040E41202BF5D34400358910 /* Resources */,
+				04DC6D942C1176E900DAB420 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DC6D922C1176E800DAB420 /* PBXTargetDependency */,
+			);
+			name = "MAD ALP Tim Charlin";
+			productName = "MAD ALP Tim Charlin";
+			productReference = 040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DC6D972C1176E900DAB420 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */;
+			buildPhases = (
+				04DC6D822C1176E600DAB420 /* Sources */,
+				04DC6D832C1176E600DAB420 /* Frameworks */,
+				04DC6D842C1176E600DAB420 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "MAD ALP Tim Charlin";
-			productName = "MAD ALP Tim Charlin";
-			productReference = 040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */;
+			name = "WatchTamagochi Watch App";
+			productName = "WatchTamagochi Watch App";
+			productReference = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,6 +299,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					040E41212BF5D34400358910 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					04DC6D852C1176E600DAB420 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -236,6 +320,7 @@
 			projectRoot = "";
 			targets = (
 				040E41212BF5D34400358910 /* MAD ALP Tim Charlin */,
+				04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +336,15 @@
 				3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */,
 				040E412A2BF5D34500358910 /* Assets.xcassets in Resources */,
 				3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DC6D842C1176E600DAB420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */,
+				04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +372,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DC6D822C1176E600DAB420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DC6D8B2C1176E600DAB420 /* ContentView.swift in Sources */,
+				04DC6D892C1176E600DAB420 /* WatchTamagochiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04DC6D922C1176E800DAB420 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */;
+			targetProxy = 04DC6D912C1176E800DAB420 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		040E412E2BF5D34500358910 /* Debug */ = {
@@ -403,6 +514,7 @@
 		040E41312BF5D34500358910 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,6 +544,7 @@
 		040E41322BF5D34500358910 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +571,66 @@
 			};
 			name = Release;
 		};
+		04DC6D952C1176E900DAB420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTamagochi Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchTamagochi;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Gavin.MAD-ALP-Tim-Charlin";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gavin.MAD-ALP-Tim-Charlin.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		04DC6D962C1176E900DAB420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTamagochi Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchTamagochi;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Gavin.MAD-ALP-Tim-Charlin";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Gavin.MAD-ALP-Tim-Charlin.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,6 +648,15 @@
 			buildConfigurations = (
 				040E41312BF5D34500358910 /* Debug */,
 				040E41322BF5D34500358910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DC6D972C1176E900DAB420 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DC6D952C1176E900DAB420 /* Debug */,
+				04DC6D962C1176E900DAB420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
