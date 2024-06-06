@@ -31,12 +31,7 @@
 		046851332C122B4E00B34914 /* SwitchAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851322C122B4E00B34914 /* SwitchAccessory.swift */; };
 		046851352C122B7500B34914 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851342C122B7500B34914 /* Player.swift */; };
 		046851362C122B7500B34914 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851342C122B7500B34914 /* Player.swift */; };
-		046851382C1231F100B34914 /* AccessoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851372C1231F100B34914 /* AccessoriesView.swift */; };
-		0468513C2C12379800B34914 /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468513B2C12379800B34914 /* ShopHeaderView.swift */; };
-		0468513E2C12387600B34914 /* ShopSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468513D2C12387600B34914 /* ShopSelectionView.swift */; };
 		046851402C1238A100B34914 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468513F2C1238A100B34914 /* ShopItem.swift */; };
-		046851422C1238E900B34914 /* UpgradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851412C1238E900B34914 /* UpgradeItemView.swift */; };
-		046851442C12392000B34914 /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851432C12392000B34914 /* UpgradeView.swift */; };
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
 		04DC6D892C1176E600DAB420 /* WatchTamagochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */; };
@@ -44,7 +39,12 @@
 		04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8C2C1176E800DAB420 /* Assets.xcassets */; };
 		04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */; };
 		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
+		14FEA64B2C124D4600803095 /* UpgradeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6442C124D4500803095 /* UpgradeItemView.swift */; };
+		14FEA64C2C124D4600803095 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6452C124D4500803095 /* ShopView.swift */; };
+		14FEA64D2C124D4600803095 /* ShopSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6462C124D4500803095 /* ShopSelectionView.swift */; };
+		14FEA64E2C124D4600803095 /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6472C124D4500803095 /* ShopHeaderView.swift */; };
+		14FEA64F2C124D4600803095 /* AccessoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6482C124D4600803095 /* AccessoriesView.swift */; };
+		14FEA6502C124D4600803095 /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FEA6492C124D4600803095 /* UpgradeView.swift */; };
 		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
 		3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA92C11722C009C1290 /* Failed.wav */; };
@@ -99,12 +99,7 @@
 		046851302C122B3200B34914 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		046851322C122B4E00B34914 /* SwitchAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAccessory.swift; sourceTree = "<group>"; };
 		046851342C122B7500B34914 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		046851372C1231F100B34914 /* AccessoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesView.swift; sourceTree = "<group>"; };
-		0468513B2C12379800B34914 /* ShopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
-		0468513D2C12387600B34914 /* ShopSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSelectionView.swift; sourceTree = "<group>"; };
 		0468513F2C1238A100B34914 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
-		046851412C1238E900B34914 /* UpgradeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeItemView.swift; sourceTree = "<group>"; };
-		046851432C12392000B34914 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchTamagochi Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +107,12 @@
 		04DC6D8A2C1176E600DAB420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04DC6D8C2C1176E800DAB420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		14FEA6442C124D4500803095 /* UpgradeItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpgradeItemView.swift; sourceTree = "<group>"; };
+		14FEA6452C124D4500803095 /* ShopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		14FEA6462C124D4500803095 /* ShopSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopSelectionView.swift; sourceTree = "<group>"; };
+		14FEA6472C124D4500803095 /* ShopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
+		14FEA6482C124D4600803095 /* AccessoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoriesView.swift; sourceTree = "<group>"; };
+		14FEA6492C124D4600803095 /* UpgradeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
 		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
 		3FCA8EA92C11722C009C1290 /* Failed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Failed.wav; sourceTree = "<group>"; };
@@ -256,12 +256,12 @@
 		04C996372C0F0FD6000F479A /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				14456E402C08417F00F24E96 /* ShopView.swift */,
-				046851372C1231F100B34914 /* AccessoriesView.swift */,
-				0468513B2C12379800B34914 /* ShopHeaderView.swift */,
-				0468513D2C12387600B34914 /* ShopSelectionView.swift */,
-				046851412C1238E900B34914 /* UpgradeItemView.swift */,
-				046851432C12392000B34914 /* UpgradeView.swift */,
+				14FEA6482C124D4600803095 /* AccessoriesView.swift */,
+				14FEA6472C124D4500803095 /* ShopHeaderView.swift */,
+				14FEA6462C124D4500803095 /* ShopSelectionView.swift */,
+				14FEA6452C124D4500803095 /* ShopView.swift */,
+				14FEA6442C124D4500803095 /* UpgradeItemView.swift */,
+				14FEA6492C124D4600803095 /* UpgradeView.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -423,13 +423,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
-				046851442C12392000B34914 /* UpgradeView.swift in Sources */,
+				14FEA64D2C124D4600803095 /* ShopSelectionView.swift in Sources */,
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
+				14FEA64E2C124D4600803095 /* ShopHeaderView.swift in Sources */,
+				14FEA64F2C124D4600803095 /* AccessoriesView.swift in Sources */,
 				046851402C1238A100B34914 /* ShopItem.swift in Sources */,
-				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
-				046851382C1231F100B34914 /* AccessoriesView.swift in Sources */,
 				046851162C12266500B34914 /* Stat.swift in Sources */,
-				0468513C2C12379800B34914 /* ShopHeaderView.swift in Sources */,
+				14FEA6502C124D4600803095 /* UpgradeView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,
@@ -437,13 +437,13 @@
 				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
 				04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */,
-				046851422C1238E900B34914 /* UpgradeItemView.swift in Sources */,
-				0468513E2C12387600B34914 /* ShopSelectionView.swift in Sources */,
 				04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */,
 				046851192C12269F00B34914 /* ScrollableSelectionView.swift in Sources */,
 				040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */,
 				0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */,
 				046851352C122B7500B34914 /* Player.swift in Sources */,
+				14FEA64B2C124D4600803095 /* UpgradeItemView.swift in Sources */,
+				14FEA64C2C124D4600803095 /* ShopView.swift in Sources */,
 				04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

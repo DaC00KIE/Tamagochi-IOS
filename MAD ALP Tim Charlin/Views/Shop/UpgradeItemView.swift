@@ -28,11 +28,11 @@ struct UpgradeItemView: View {
                     Button(action: {
                         tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type)
                     }) {
-//                        Text("Level: \(getLevel(for: item))")
-//                            .padding()
-//                            .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
-//                            .foregroundColor(.white)
-//                            .cornerRadius(10)
+                        Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
+                            .padding()
+                            .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
                     .disabled(tamagotchi.coins < item.cost)
                     Spacer()
@@ -45,17 +45,4 @@ struct UpgradeItemView: View {
         .background(Color.gray.opacity(0.2))
         .cornerRadius(10)
     }
-    
-//    private func getLevel(for item: UpgradeItem) -> Int {
-//            switch item.type {
-//            case "Capacity":
-//                return tamagotchi[keyPath: item.statKeyPath].barLevel
-//            case "Action":
-//                return tamagotchi[keyPath: item.statKeyPath].actionLevel
-//            case "Timer":
-//                return tamagotchi[keyPath: item.statKeyPath].timerLevel
-//            default:
-//                return 0
-//            }
-//        }
 }
