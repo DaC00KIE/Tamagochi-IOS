@@ -8,13 +8,7 @@
 import Foundation
 import SwiftUI
 
-//@State private var characterImage = UIImage(named: "character")! // Replace with your character image
-//@State private var faceImage: UIImage?
-//@State private var hatImage: UIImage?
-//@State private var selectedFace: String = "Default_face"
-//@State private var selectedHat: String = "none"
-
-class Tamagochi: ObservableObject{
+class Tamagochi: ObservableObject {
     var name: String
     
     @Published var health = Stat(type: .health, value: 100, max: 100)
@@ -24,16 +18,19 @@ class Tamagochi: ObservableObject{
     @Published var energy = Stat(type: .energy, value: 1800, max: 3600)
     
     @Published var characterImage: UIImage
-    @Published var faceImage: UIImage? = UIImage(named:"Default_face")
-    @Published var hatImage: UIImage? = UIImage(named:"none")
+    @Published var faceImage: UIImage? = UIImage(named: "Default_face")
+    @Published var hatImage: UIImage? = UIImage(named: "none")
     @Published var selectedFace: String
     @Published var selectedHat: String
     
-    init(){
+    @Published var skinColor: Color
+    
+    init() {
         self.name = "Default Name"
         self.characterImage = UIImage(named: "character")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
+        self.skinColor = Color.red
     }
     
     func getStat(_ type: StatType) -> Stat{
@@ -57,33 +54,29 @@ class Tamagochi: ObservableObject{
 
     func clean(amount: Int) {
         cleanliness.add(amount)
-        
-        energy.minus(amount/4)
-        fun.minus(amount/2)
+        energy.minus(amount / 4)
+        fun.minus(amount / 2)
     }
 
     func play(amount: Int) {
         fun.add(amount)
-        
-        energy.minus(amount/2)
-        cleanliness.minus(amount/4)
-        
-        if hunger.value < amount/4{
+        energy.minus(amount / 2)
+        cleanliness.minus(amount / 4)
+        if hunger.value < amount / 4 {
             health.minus(5)
         }
-        hunger.minus(amount/4)
-        
+        hunger.minus(amount / 4)
     }
     
-    func rest(amount: Int){
+    func rest(amount: Int) {
         energy.add(amount)
-        hunger.minus(amount/4)
+        hunger.minus(amount / 4)
     }
     
-    func minusBars(by: Int){
+    func minusBars(by: Int) {
         hunger.minus(by)
         cleanliness.minus(by)
-        fun.minus(by/2)
-        energy.minus(by/2)
+        fun.minus(by / 2)
+        energy.minus(by / 2)
     }
 }
