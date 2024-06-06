@@ -11,7 +11,6 @@ struct UserProfileView: View {
     var body: some View {
         VStack {
             HStack {
-                CircleImage().padding(32)
                 VStack {
                     ProfileTextContainer(titleText: "User", text:"name")
                     ProfileTextContainer(titleText: "Total Time", text:"364d 23h")

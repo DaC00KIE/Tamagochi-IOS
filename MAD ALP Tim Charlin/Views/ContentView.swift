@@ -34,6 +34,9 @@ struct ContentView: View {
                     Text("Home")
                 }
                 .tag(0)
+                .onAppear {
+                    SoundManager.inst.play(sound: .Tab)
+                }
             
             ShopView(tamagochi: tamagochi)
                 .tabItem{
@@ -41,6 +44,9 @@ struct ContentView: View {
                     Text("Shop")
                 }
                 .tag(1)
+                .onAppear {
+                    SoundManager.inst.play(sound: .Tab)
+                }
             
             CustomizeView(tamagochi: tamagochi)
                 .tabItem{
@@ -48,6 +54,9 @@ struct ContentView: View {
                     Text("Outfits")
                 }
                 .tag(2)
+                .onAppear {
+                    SoundManager.inst.play(sound: .Tab)
+                }
         }
         
        

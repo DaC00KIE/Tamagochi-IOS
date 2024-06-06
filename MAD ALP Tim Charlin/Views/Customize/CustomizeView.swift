@@ -63,6 +63,7 @@ struct CustomizeView: View {
                                         }
                                         .onChange(of: isCentered) { newValue in
                                             if newValue {
+                                                SoundManager.inst.play(sound: .Choose)
                                                 selectedItem = item
                                             }
                                         }

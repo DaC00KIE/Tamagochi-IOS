@@ -19,6 +19,11 @@
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
 		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
+		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
+		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
+		3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA92C11722C009C1290 /* Failed.wav */; };
+		3FCA8EAE2C11722C009C1290 /* Tab.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EAA2C11722C009C1290 /* Tab.wav */; };
+		3FCA8EAF2C11722C009C1290 /* Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EAB2C11722C009C1290 /* Complete.wav */; };
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
@@ -38,6 +43,11 @@
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
+		3FCA8EA92C11722C009C1290 /* Failed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Failed.wav; sourceTree = "<group>"; };
+		3FCA8EAA2C11722C009C1290 /* Tab.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tab.wav; sourceTree = "<group>"; };
+		3FCA8EAB2C11722C009C1290 /* Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Complete.wav; sourceTree = "<group>"; };
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -73,6 +83,7 @@
 		040E41242BF5D34400358910 /* MAD ALP Tim Charlin */ = {
 			isa = PBXGroup;
 			children = (
+				3FCA8EA72C1171CB009C1290 /* Sounds */,
 				040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */,
 				04C996322C0EEE60000F479A /* Views */,
 				04C996332C0EEE80000F479A /* Models */,
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */,
+				3FCA8EA52C117101009C1290 /* SoundManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -164,6 +176,17 @@
 			path = Progress;
 			sourceTree = "<group>";
 		};
+		3FCA8EA72C1171CB009C1290 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA8EA82C11722C009C1290 /* Choose.wav */,
+				3FCA8EAB2C11722C009C1290 /* Complete.wav */,
+				3FCA8EA92C11722C009C1290 /* Failed.wav */,
+				3FCA8EAA2C11722C009C1290 /* Tab.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,7 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */,
+				3FCA8EAF2C11722C009C1290 /* Complete.wav in Resources */,
+				3FCA8EAE2C11722C009C1290 /* Tab.wav in Resources */,
+				3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */,
 				040E412A2BF5D34500358910 /* Assets.xcassets in Resources */,
+				3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +266,7 @@
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
+				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
 				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
