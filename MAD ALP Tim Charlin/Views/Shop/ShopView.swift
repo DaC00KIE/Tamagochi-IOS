@@ -14,20 +14,7 @@ struct UpgradeItem: Identifiable {
     let imageName: String
     let cost: Int
     let statKeyPath: ReferenceWritableKeyPath<Tamagochi, Stat>
-    let increaseAmount: Int
-}
-
-struct AccessoryItem: Identifiable {
-    let id = UUID()
-    let name: String
-    let imageName: String
-    let cost: Int
-    let type: AccessoryType
-    
-    enum AccessoryType {
-        case face
-        case hat
-    }
+    let type: String
 }
 
 struct ShopView: View {
@@ -36,19 +23,90 @@ struct ShopView: View {
     @State private var selectedShop: String = "Upgrade"
     
     let upgradeItems: [UpgradeItem] = [
-        UpgradeItem(name: "Increase Hunger Max", description: "Increase the maximum hunger capacity.", imageName: "hunger", cost: 200, statKeyPath: \.hunger, increaseAmount: 600),
-        UpgradeItem(name: "Increase Cleanliness Max", description: "Increase the maximum cleanliness capacity.", imageName: "cleanliness", cost: 300, statKeyPath: \.cleanliness, increaseAmount: 600),
-        UpgradeItem(name: "Increase Fun Max", description: "Increase the maximum fun capacity.", imageName: "fun", cost: 400, statKeyPath: \.fun, increaseAmount: 600),
-        UpgradeItem(name: "Increase Energy Max", description: "Increase the maximum energy capacity.", imageName: "energy", cost: 500, statKeyPath: \.energy, increaseAmount: 600)
+        UpgradeItem(name: "Increase Hunger Max",
+                    description: "Boosts the pet's maximum hunger capacity, allowing it to stay satisfied for longer periods.",
+                    imageName: "hunger",
+                    cost: 200,
+                    statKeyPath: \.hunger,
+                    type: "Capacity"),
+        
+        UpgradeItem(name: "Increase Feed Gains",
+                    description: "Enhances the effectiveness of feeding, increasing the amount of hunger satisfaction gained from each feeding.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: "Action"),
+        
+        UpgradeItem(name: "Increase Hunger Resistance",
+                    description: "Improves the pet's resistance to hunger, decreasing the rate at which it becomes hungry.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: "Timer"),
+        
+        UpgradeItem(name: "Increase Cleanliness Max",
+                    description: "Expands the pet's maximum cleanliness capacity, allowing it to stay clean for longer durations.",
+                    imageName: "cleanliness",
+                    cost: 300,
+                    statKeyPath: \.cleanliness,
+                    type: "Capacity"),
+        
+        UpgradeItem(name: "Increase Clean Gains",
+                    description: "Increases the amount of cleanliness restored when the pet is cleaned, making each cleaning session more effective.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: "Action"),
+        
+        UpgradeItem(name: "Increase Clean Resistance",
+                    description: "Boosts the pet's resistance to becoming dirty, reducing the frequency of cleanliness deterioration.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: "Timer"),
+        
+        UpgradeItem(name: "Increase Fun Max",
+                    description: "Raises the pet's maximum fun capacity, allowing it to stay entertained for longer periods.",
+                    imageName: "fun",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: "Capacity"),
+        
+        UpgradeItem(name: "Increase Play Gains",
+                    description: "Enhances the amount of fun gained from playing with the pet, making each play session more enjoyable.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: "Action"),
+        
+        UpgradeItem(name: "Increase Fun Resistance",
+                    description: "Improves the pet's resistance to boredom, decreasing the rate at which it loses fun.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: "Timer"),
+        
+        UpgradeItem(name: "Increase Energy Max",
+                    description: "Increases the pet's maximum energy capacity, enabling it to stay active for longer periods.",
+                    imageName: "energy",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: "Capacity"),
+        
+        UpgradeItem(name: "Increase Rest Gains",
+                    description: "Boosts the amount of energy restored when the pet rests, making each rest period more rejuvenating.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: "Action"),
+        
+        UpgradeItem(name: "Increase Energy Resistance",
+                    description: "Enhances the pet's resistance to fatigue, reducing the rate at which it loses energy.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: "Timer")
     ]
-    
-    let accessories: [AccessoryItem] = [
-        AccessoryItem(name: "Christmas Hat", imageName: "hat_christmas", cost: 200, type: .hat),
-        AccessoryItem(name: "Mexican Hat", imageName: "hat_mexican", cost: 150, type: .hat),
-        AccessoryItem(name: "Confused Face", imageName: "face_confused", cost: 75, type: .face),
-        AccessoryItem(name: "Creeper Face", imageName: "face_creeper", cost: 100, type: .face)
-    ]
-    
     
     var body: some View {
         NavigationView {
@@ -100,7 +158,7 @@ struct ShopView: View {
                                         }
                                         VStack {
                                             Button(action: {
-                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: item.increaseAmount)
+                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, type: item.type)
                                             }) {
                                                 Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
                                                     .padding()
@@ -124,42 +182,7 @@ struct ShopView: View {
                         .padding()
                     }
                 } else if selectedShop == "Accessories" {
-                    ScrollView {
-                        LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 20) {
-                            ForEach(accessories) { accessory in
-                                VStack {
-                                    Text(accessory.name)
-                                    Image(accessory.imageName)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
-                                    Spacer()
-                                    Button(action: {
-                                        if tamagotchi.coins >= accessory.cost {
-                                            tamagotchi.coins -= accessory.cost
-                                            if accessory.type == .face {
-                                                tamagotchi.purchasedFaces.append(accessory.imageName)
-                                            } else if accessory.type == .hat {
-                                                tamagotchi.purchasedHats.append(accessory.imageName)
-                                            }
-                                        }
-                                    }) {
-                                        Text(tamagotchi.purchasedFaces.contains(accessory.imageName) || tamagotchi.purchasedHats.contains(accessory.imageName) ? "Owned" : "\(accessory.cost) Coins")
-                                            .padding(.horizontal, 20)
-                                            .padding(.vertical, 10)
-                                            .background(tamagotchi.purchasedFaces.contains(accessory.imageName) || tamagotchi.purchasedHats.contains(accessory.imageName) ? Color.green : (tamagotchi.coins >= accessory.cost ? Color.blue : Color.gray))
-                                            .foregroundColor(.white)
-                                            .cornerRadius(10)
-                                    }
-                                    .disabled(tamagotchi.coins < accessory.cost || tamagotchi.purchasedFaces.contains(accessory.imageName) || tamagotchi.purchasedHats.contains(accessory.imageName))
-                                }
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(10)
-                            }
-                        }
-                        .padding()
-                    }
+                    AccessoriesView()
                 }
             }
             .navigationBarTitle("")
