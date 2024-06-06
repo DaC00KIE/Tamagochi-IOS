@@ -113,13 +113,10 @@
 		04112AF32C0F7CC400F7F134 /* Customize */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				3F4BB74E2C084C2700A54D1A /* User.swift */,
 				3F4BB7572C0956D200A54D1A /* Pet.swift */,
 				3F4BB74C2C08460700A54D1A /* ModelData.swift */,
-=======
 				04112AF42C0F7CE300F7F134 /* CustomizeView.swift */,
->>>>>>> eebc3bcb3955c868fdbd8c7a171588268316547a
 			);
 			path = Customize;
 			sourceTree = "<group>";
