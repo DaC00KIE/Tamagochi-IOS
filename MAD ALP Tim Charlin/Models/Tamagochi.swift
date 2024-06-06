@@ -28,7 +28,7 @@ class Tamagochi: ObservableObject {
     let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     
     init() {
-        self.name = "Default Name"
+        self.name = "DjDT"
         self.characterImage = UIImage(named: "character")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"

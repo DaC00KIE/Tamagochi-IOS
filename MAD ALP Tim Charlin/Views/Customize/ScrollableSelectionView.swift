@@ -48,7 +48,7 @@ struct ScrollableSelectionView: View {
                 }
             }
         }
-        .frame(height: 70) // Adjust as needed
+        .frame(height: 50) // Adjust as needed
     }
 }
 

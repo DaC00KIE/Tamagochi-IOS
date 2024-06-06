@@ -21,17 +21,19 @@ struct HomeView: View {
             5: .cleanliness
         ]
         
-        VStack {
-            VStack{ // Adjust spacing as needed
-                if let statType = statsDict[currentPage] {
-                    StatView(tamagochi: tamagochi, statType: statType)
-                } else {
-                  // Handle the case where statType is nil (e.g., display default text)
-                  Text("Stat: N/A")
+        NavigationStack {
+            VStack {
+                VStack{ // Adjust spacing as needed
+                    if let statType = statsDict[currentPage] {
+                        StatView(tamagochi: tamagochi, statType: statType)
+                    } else {
+                      // Handle the case where statType is nil (e.g., display default text)
+                      Text("Stat: N/A")
+                    }
                 }
+                .frame(height: 200)
                 
                 HorizontalPageIndicator(currentPage: currentPage, maxPages: statsDict.count)
-                    .padding(.bottom, -5)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -42,7 +44,7 @@ struct HomeView: View {
             }
             .onEnded { _ in
               // Check swipe direction and update value
-              if offset < 20 {
+              if offset < -20 {
                   currentPage += 1 // Increase for right swipe
                   if currentPage > 5{
                       currentPage = 1
