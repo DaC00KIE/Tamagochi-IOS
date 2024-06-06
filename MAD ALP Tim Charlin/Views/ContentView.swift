@@ -20,19 +20,20 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            ShopView(tamagochi: tamagochi)
-                .tabItem{
-                    Image("icon_upgrade_outlined")
-                    Text("Shop")
-                }
-                .tag(1)
+//            ShopView(tamagochi: tamagochi)
+//            Text("Shop View")
+//                .tabItem{
+//                    Image("icon_upgrade_outlined")
+//                    Text("Shop")
+//                }
+//                .tag(1)
             
             CustomizeView(tamagochi: tamagochi)
                 .tabItem{
                     Image("icon_outfit_outlined")
                     Text("Outfits")
                 }
-                .tag(2)
+                .tag(1)
         }
         
        

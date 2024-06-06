@@ -27,7 +27,8 @@ struct WatchDisplayTamagochi: View {
             .scaledToFit()
             .frame(width: frameSize, height: frameSize)
 
-            Image("\(tamagochi.selectedFace)")
+//            Image("\(tamagochi.selectedFace)")
+            Image("face_default")
               .resizable()
               .scaledToFit()
               .frame(width: frameSize, height: frameSize)
@@ -41,6 +42,6 @@ struct WatchDisplayTamagochi: View {
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return WatchDisplayTamagochi(tamagochi: tamagochi, frame: 250)
+    return WatchDisplayTamagochi(tamagochi: tamagochi, frame: 200)
     
 }
