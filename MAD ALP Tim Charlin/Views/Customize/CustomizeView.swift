@@ -24,7 +24,15 @@ struct CustomizeView: View {
             VStack {
                 ScrollableSelectionView(items: faces, selectedItem: $tamagochi.selectedFace)
                 ScrollableSelectionView(items: hats, selectedItem: $tamagochi.selectedHat)
-                
+                VStack(spacing: 5) { // Center text and ColorPicker vertically within HStack
+                                   Text("Pick a Colour: ")
+                                       .font(.headline) // Use .headline for a clear heading style
+                                       .foregroundColor(.black) // Set text color for better contrast
+                                   ColorPicker("", selection: $tamagochi.skinColor)
+                                       .foregroundColor(.black) // Set text color for better contrast
+                                       .font(.subheadline) // Use .subheadline for a smaller, descriptive font
+                                       .padding(5) // Add padding for aesthetics
+                               }
                 
                 ColorPicker("Pick a Colour: ", selection: $tamagochi.skinColor)
                 
