@@ -10,18 +10,12 @@ import SwiftUI
 struct ProgressView: View {
     @StateObject var tamagochi: Tamagochi
     
-    @State private var currentDate = Date.now
-        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-    
-    @State private var isClickedToShop: Bool = false
-    
-    let defaultTimer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     let defaultFrameWidth = 100
     
     var body: some View {
         
         VStack{
+            Spacer()
             ZStack{
                 TamagochiDisplay(tamagochi: tamagochi, frame: 300)
                     .padding(.top, 20)
@@ -32,7 +26,6 @@ struct ProgressView: View {
                         Text("Health")
                         ProgressBar(stat: $tamagochi.health, frameWidth: defaultFrameWidth * 2 + 40)
                     }
-                    
                     Spacer()
                 }
             }
@@ -50,7 +43,8 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.hunger.isFull {
-                                tamagochi.eat(amount: 100)
+                                tamagochi.eat()
+                                
                             }
                         }) {
                             Text("Feed")
@@ -69,7 +63,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.cleanliness.isFull {
-                                tamagochi.clean(amount: 100)
+                                tamagochi.clean()
                             }
                         }) {
                             Text("Clean")
@@ -90,7 +84,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.fun.isFull{
-                                tamagochi.play(amount: 100)
+                                tamagochi.play()
                             }
                         }) {
                             Text("Play")
@@ -108,7 +102,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.energy.isFull{
-                                tamagochi.rest(amount: 100)
+                                tamagochi.rest()
                             }
                         }) {
                             Text("Rest")
@@ -121,26 +115,12 @@ struct ProgressView: View {
                     }
                     .padding(.horizontal)
                 }
-                .padding(.bottom)
+                .padding(.bottom, 50)
                 
-    //            Text("Shop")
-    //                .padding()
-    //                .frame(width: CGFloat(defaultFrameWidth) * 2 + 40)
-    //                .background(Color.orange)
-    //                .foregroundColor(.white)
-    //                .cornerRadius(10)
-    //                .onTapGesture {
-    //                    self.isClickedToShop = true
-    //                }
-    //                .fullScreenCover(isPresented: $isClickedToShop) {
-    //                    Content_View(tamagochi: tamagochi)
-    //                }
-
-                Spacer()
             }
             .padding(.top, -60)
-            .onReceive(defaultTimer) { _ in
-                tamagochi.minusBars(by: 200)
+            .onReceive(tamagochi.timer) { _ in
+                tamagochi.minusBars()
             }
             
         }

@@ -11,11 +11,11 @@ import SwiftUI
 class Tamagochi: ObservableObject {
     var name: String
     
-    @Published var health = Stat(value: 100, max: 100)
-    @Published var hunger = Stat(value: 1800, max: 3600)
-    @Published var cleanliness = Stat(value: 1800, max: 3600)
-    @Published var fun = Stat(value: 1800, max: 3600)
-    @Published var energy = Stat(value: 1800, max: 3600)
+    @Published var health = Stat(type: .health, value: 100, max_base: 100)
+    @Published var hunger = Stat(type: .hunger)
+    @Published var cleanliness = Stat(type: .cleanliness)
+    @Published var fun = Stat(type: .fun)
+    @Published var energy = Stat(type: .energy)
     
     @Published var characterImage: UIImage
     @Published var faceImage: UIImage? = UIImage(named: "Default_face")
@@ -25,6 +25,8 @@ class Tamagochi: ObservableObject {
     
     @Published var skinColor: Color
     
+    let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
+    
     init() {
         self.name = "Default Name"
         self.characterImage = UIImage(named: "character")!
@@ -33,62 +35,75 @@ class Tamagochi: ObservableObject {
         self.skinColor = Color.red
     }
     
-    func eat(amount: Int) {
-        hunger.add(amount)
-    }
-
-    func clean(amount: Int) {
-        cleanliness.add(amount)
-        energy.minus(amount / 4)
-        fun.minus(amount / 2)
-    }
-
-    func play(amount: Int) {
-        fun.add(amount)
-        energy.minus(amount / 2)
-        cleanliness.minus(amount / 4)
-        if hunger.value < amount / 4 {
-            health.minus(5)
+    func getStat(_ type: StatType) -> Stat{
+        switch type{
+        case .health:
+            return health
+        case .hunger:
+            return hunger
+        case .cleanliness:
+            return cleanliness
+        case .fun:
+            return fun
+        default:
+            return energy
         }
-        hunger.minus(amount / 4)
     }
     
-    func rest(amount: Int) {
-        energy.add(amount)
-        hunger.minus(amount / 4)
-    }
-    
-    func minusBars(by: Int) {
-        hunger.minus(by)
-        cleanliness.minus(by)
-        fun.minus(by / 2)
-        energy.minus(by / 2)
-    }
-}
-
-struct Stat {
-    var value: Int
-    var max: Int
-    
-    var percentage: Int {
-        guard max > 0 else { return 0 }
-        let percentage = Double(value) / Double(max) * 100
-        return Int(round(percentage))
-    }
-    
-    var isFull: Bool {
-        return value >= max
-    }
-    
-    mutating func add(_ amount: Int) {
-        value = min(value + amount, max)
-    }
-    
-    mutating func minus(_ amount: Int) {
-        // not using max(value - amount, 0) because conflict with var name
-        value -= amount
-        if value < 0 {
-            value = 0
+    private func spendEnergy(amount: Int){
+        if energy.value == 0{
+            hunger.minus(by: amount)
+            return
         }
+        energy.minus(by: amount)
+    }
+    
+    private func spendHunger(amount: Int){
+        var modified_amount: Int = amount
+        
+        if cleanliness.percentage < 20{
+            modified_amount = amount * 2
+        }
+        
+        if hunger.value < modified_amount {
+            health.minus(by: modified_amount / 10)
+        }
+        
+        hunger.minus(by: modified_amount)
+    }
+    
+    func eat() {
+        hunger.add()
+        
+        spendEnergy(amount: 25)
+    }
+
+    func clean() {
+        cleanliness.add()
+        
+        fun.minus(by: 50)
+        spendEnergy(amount: 50)
+    }
+
+    func play() {
+        fun.add()
+        
+        cleanliness.minus(by: 50)
+        
+        spendHunger(amount: 50)
+        spendEnergy(amount: 80)
+    }
+    
+    func rest() {
+        energy.add()
+        
+        spendHunger(amount: 50)
+    }
+    
+    func minusBars() {
+        hunger.minus()
+        cleanliness.minus()
+        fun.minus()
+        energy.minus()
     }
 }

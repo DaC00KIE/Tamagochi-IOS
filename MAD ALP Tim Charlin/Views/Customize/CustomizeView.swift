@@ -24,15 +24,7 @@ struct CustomizeView: View {
             VStack {
                 ScrollableSelectionView(items: faces, selectedItem: $tamagochi.selectedFace)
                 ScrollableSelectionView(items: hats, selectedItem: $tamagochi.selectedHat)
-                VStack(spacing: 5) { // Center text and ColorPicker vertically within HStack
-                                   Text("Pick a Colour: ")
-                                       .font(.headline) // Use .headline for a clear heading style
-                                       .foregroundColor(.black) // Set text color for better contrast
-                                   ColorPicker("", selection: $tamagochi.skinColor)
-                                       .foregroundColor(.black) // Set text color for better contrast
-                                       .font(.subheadline) // Use .subheadline for a smaller, descriptive font
-                                       .padding(5) // Add padding for aesthetics
-                               }
+                
                 
                 ColorPicker("Pick a Colour: ", selection: $tamagochi.skinColor)
                 
@@ -40,57 +32,9 @@ struct CustomizeView: View {
             }
         }
     }
-    
-    struct ScrollableSelectionView: View {
-        var items: [String]
-        @Binding var selectedItem: String
-        
-        @State private var scrollOffset: CGFloat = 0.0
-        @State private var dragOffset: CGFloat = 0.0
-        
-        var body: some View {
-            GeometryReader { geometry in
-                ScrollViewReader { scrollProxy in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 30) {
-                            ForEach(items, id: \.self) { item in
-                                GeometryReader { itemGeometry in
-                                    let isCentered = abs(itemGeometry.frame(in: .global).midX - geometry.size.width / 2) < 20
-                                    Image(item)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
-                                        .background(Color.gray.opacity(isCentered ? 1 : 0.2))
-                                        .clipShape(Circle())
-                                        .onTapGesture {
-                                            withAnimation {
-                                                scrollProxy.scrollTo(item, anchor: .center)
-                                            }
-                                            selectedItem = item
-                                        }
-                                        .onChange(of: isCentered) { newValue in
-                                            if newValue {
-                                                SoundManager.inst.play(sound: .Choose)
-                                                selectedItem = item
-                                            }
-                                        }
-                                }
-                                .frame(width: 50, height: 50)
-                            }
-                        }
-                        .padding(.horizontal, (geometry.size.width - 50) / 2)
-                    }
-                }
-            }
-            .frame(height: 70) // Adjust as needed
-        }
-    }
-    
-    struct CustomizeView_Previews: PreviewProvider {
-        static var previews: some View {
-            let tamagochi = Tamagochi()
-            return CustomizeView(tamagochi: tamagochi)
-        }
-    }
+}
+
+#Preview {
+    @State var pet = Tamagochi()
+    return CustomizeView(tamagochi: pet)
 }

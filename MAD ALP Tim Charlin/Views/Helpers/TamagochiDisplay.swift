@@ -13,11 +13,11 @@
 import SwiftUI
 
 struct TamagochiDisplay: View {
-    @StateObject var tamagochi: Tamagochi
-      var frame: Int
-      private var frameSize: CGFloat{
-          return CGFloat(frame)
-      }
+    @ObservedObject var tamagochi: Tamagochi
+    var frame: Int
+    private var frameSize: CGFloat{
+        return CGFloat(frame)
+    }
     
     var body: some View {
         ZStack {
