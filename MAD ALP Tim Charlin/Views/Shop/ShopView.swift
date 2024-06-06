@@ -114,51 +114,48 @@ struct ShopView: View {
                 ShopHeaderView(coins: tamagotchi.coins)
                 ShopSelectionView(selectedShop: $selectedShop)
                 if selectedShop == "Upgrade" {
-<<<<<<< HEAD
-                    UpgradeItemsView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
-=======
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            ForEach(upgradeItems) { item in
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Image(item.imageName)
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                            .padding(.trailing, 10)
-                                        VStack(alignment: .leading) {
-                                            Text(item.name)
-                                                .font(.headline)
-                                            Text(item.description)
-                                                .font(.subheadline)
-                                        }
-                                        VStack {
-                                            Button(action: {
-                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 200,  type: item.type)
-                                                SoundManager.inst.play(sound: .Complete)
-                                            }) {
-                                                Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
-                                                    .padding()
-                                                    .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(10)
-                                            }
-                                            .disabled(tamagotchi.coins < item.cost)
-                                            Spacer()
-                                            Text("\(item.cost) Coins")
-                                                .font(.subheadline)
-                                        }
-                                    }
-                                    
-                                }
-                                .padding()
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(10)
-                            }
-                        }
-                        .padding()
-                    }
->>>>>>> a9c29f187f0b889c9d41d8d62a2f4a512d2beafd
+                    UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
+//                    ScrollView {
+//                        VStack(spacing: 20) {
+//                            ForEach(upgradeItems) { item in
+//                                VStack(alignment: .leading) {
+//                                    HStack {
+//                                        Image(item.imageName)
+//                                            .resizable()
+//                                            .frame(width: 50, height: 50)
+//                                            .padding(.trailing, 10)
+//                                        VStack(alignment: .leading) {
+//                                            Text(item.name)
+//                                                .font(.headline)
+//                                            Text(item.description)
+//                                                .font(.subheadline)
+//                                        }
+//                                        VStack {
+//                                            Button(action: {
+//                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 200,  type: item.type)
+//                                                SoundManager.inst.play(sound: .Complete)
+//                                            }) {
+//                                                Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
+//                                                    .padding()
+//                                                    .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
+//                                                    .foregroundColor(.white)
+//                                                    .cornerRadius(10)
+//                                            }
+//                                            .disabled(tamagotchi.coins < item.cost)
+//                                            Spacer()
+//                                            Text("\(item.cost) Coins")
+//                                                .font(.subheadline)
+//                                        }
+//                                    }
+//                                    
+//                                }
+//                                .padding()
+//                                .background(Color.gray.opacity(0.2))
+//                                .cornerRadius(10)
+//                            }
+//                        }
+//                        .padding()
+//                    }
                 } else if selectedShop == "Accessories" {
                     AccessoriesView(tamagotchi: tamagotchi)
                 }

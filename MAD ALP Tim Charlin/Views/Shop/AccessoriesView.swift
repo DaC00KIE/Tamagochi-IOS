@@ -4,20 +4,19 @@
 //
 //  Created by Charlin Leo on 05/06/24.
 //
-
 import SwiftUI
 
 struct AccessoryItem: Identifiable {
-    let id = UUID()
-    let name: String
-    let imageName: String
-    let cost: Int
-    let type: AccessoryType
-    
-    enum AccessoryType {
-        case face
-        case hat
-    }
+    var id = UUID()
+    var name: String
+    var imageName: String
+    var cost: Int
+    var type: AccessoryType
+}
+
+enum AccessoryType {
+    case hat
+    case face
 }
 
 struct AccessoriesView: View {
@@ -70,5 +69,11 @@ struct AccessoriesView: View {
             }
             .padding()
         }
+    }
+}
+
+struct AccessoriesView_Previews: PreviewProvider {
+    static var previews: some View {
+        AccessoriesView(tamagotchi: Tamagochi())
     }
 }
