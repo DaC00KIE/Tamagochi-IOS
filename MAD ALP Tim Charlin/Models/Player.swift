@@ -27,7 +27,7 @@ class Player: ObservableObject, Identifiable{
         self.dateStarted = Date.now
         self.id = id
         self.name = name
-        self.coins = 1000
+        self.coins = 100000
         self.tamagochi = Tamagochi.generateNew()
     }
 }

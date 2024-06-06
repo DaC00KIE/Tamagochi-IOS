@@ -122,18 +122,18 @@ class Tamagochi: ObservableObject {
                 return
             }
 
-    //        switch type {
-    //        case "Capacity":
-    //            coins -= cost
-    //            self[keyPath: stat].increaseCapacity()
-    //        case "Action":
-    //            coins -= cost
-    //            self[keyPath: stat].increaseAction() // Menambahkan langsung ke nilai
-    //        case "Timer":
-    //            coins -= cost
-    //            self[keyPath: stat].increaseTimer() // Mengurangi dari nilai
-    //        default:
-    //            print("Invalid upgrade type")
-    //        }
+            switch type {
+            case "Capacity":
+                coins -= cost
+                self[keyPath: stat].increaseCapacity()
+            case "Action":
+                coins -= cost
+                self[keyPath: stat].increaseAction() // Menambahkan langsung ke nilai
+            case "Timer":
+                coins -= cost
+                self[keyPath: stat].timerReduction() // Mengurangi dari nilai
+            default:
+                print("Invalid upgrade type")
+            }
         }
 }

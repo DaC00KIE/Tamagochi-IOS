@@ -26,9 +26,9 @@ struct UpgradeItemView: View {
                 }
                 VStack {
                     Button(action: {
-                        tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type)
+                        tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type.rawValue)
                     }) {
-                        Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
+                        Text("Level: \(getLevel(for: item))")
                             .padding()
                             .background(tamagotchi.coins >= item.cost ? Color.blue : Color.gray)
                             .foregroundColor(.white)
@@ -44,5 +44,16 @@ struct UpgradeItemView: View {
         .padding()
         .background(Color.gray.opacity(0.2))
         .cornerRadius(10)
+    }
+    
+    private func getLevel(for item: UpgradeItem) -> Int {
+        switch item.type {
+        case .capacity:
+            return tamagotchi[keyPath: item.statKeyPath].max_lvl
+        case .action:
+            return tamagotchi[keyPath: item.statKeyPath].increase_lvl
+        case .timer:
+            return tamagotchi[keyPath: item.statKeyPath].reduction_lvl
+        }
     }
 }
