@@ -16,42 +16,35 @@ struct StatView: View {
         VStack{
             
             Text("\(statType.rawValue)")
+                .padding(.top, -40)
             
             switch statType{
             case .cleanliness:
-                ProgressBar(stat: $tamagochi.cleanliness, frameWidth: 150)
+                ProgressBar(stat: $tamagochi.cleanliness, frameWidth: 150).padding(.top, -20)
             case .hunger:
-                ProgressBar(stat: $tamagochi.hunger, frameWidth: 150)
+                ProgressBar(stat: $tamagochi.hunger, frameWidth: 150).padding(.vertical, -20)
             case .energy:
-                ProgressBar(stat: $tamagochi.energy, frameWidth: 150)
+                ProgressBar(stat: $tamagochi.energy, frameWidth: 150).padding(.vertical, -20)
             case .fun:
-                ProgressBar(stat: $tamagochi.fun, frameWidth: 150)
+                ProgressBar(stat: $tamagochi.fun, frameWidth: 150).padding(.vertical, -20)
             default:
-                ProgressBar(stat: $tamagochi.health, frameWidth: 150)
+                ProgressBar(stat: $tamagochi.health, frameWidth: 150).padding(.vertical, -20)
             }
             
-            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 150)
-                .padding(.top, -20)
-                .padding(.bottom, -30)
+            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 200)
+                .padding(.top, -40)
+                .padding(.bottom, -40)
             
 //            Spacer()
             
             switch statType{
-            case .fun:
-                Button(action:{
-                    if !tamagochi.fun.isFull{
-                        tamagochi.play(amount: 360)
-                    }
-                }){
-                    Text("Play")
-                }
-                .frame(width: 150, height: 40)
-                .background(Color.blue)
-                .cornerRadius(10)
-
-            default:
+            case .health:
                 Text("\(tamagochi.name)")
-                    .padding(.top, 20)
+                    .padding(.top, 10)
+                    .padding(.bottom, 15)
+            default:
+                ButtonAction(tamagochi: tamagochi, statType: statType)
+                    .padding(.bottom, 5)
             }
             
 //            Spacer()

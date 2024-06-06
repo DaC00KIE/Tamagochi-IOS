@@ -11,11 +11,11 @@ import SwiftUI
 class Tamagochi: ObservableObject {
     var name: String
     
-    @Published var health = Stat(type: .health, value: 100, max: 100)
-    @Published var hunger = Stat(type: .hunger, value: 1800, max: 3600)
-    @Published var cleanliness = Stat(type: .cleanliness, value: 1800, max: 3600)
-    @Published var fun = Stat(type: .fun, value: 1800, max: 3600)
-    @Published var energy = Stat(type: .energy, value: 1800, max: 3600)
+    @Published var health = Stat(type: .health, value: 100, max_base: 100)
+    @Published var hunger = Stat(type: .hunger)
+    @Published var cleanliness = Stat(type: .cleanliness)
+    @Published var fun = Stat(type: .fun)
+    @Published var energy = Stat(type: .energy)
     
     @Published var characterImage: UIImage
     @Published var faceImage: UIImage? = UIImage(named: "Default_face")
@@ -50,35 +50,60 @@ class Tamagochi: ObservableObject {
         }
     }
     
-    func eat(amount: Int) {
-        hunger.add(amount)
-    }
-
-    func clean(amount: Int) {
-        cleanliness.add(amount)
-        energy.minus(amount / 4)
-        fun.minus(amount / 2)
-    }
-
-    func play(amount: Int) {
-        fun.add(amount)
-        energy.minus(amount / 2)
-        cleanliness.minus(amount / 4)
-        if hunger.value < amount / 4 {
-            health.minus(5)
+    private func spendEnergy(amount: Int){
+        if energy.value == 0{
+            hunger.minus(by: amount)
+            return
         }
-        hunger.minus(amount / 4)
+        energy.minus(by: amount)
     }
     
-    func rest(amount: Int) {
-        energy.add(amount)
-        hunger.minus(amount / 4)
+    private func spendHunger(amount: Int){
+        var modified_amount: Int = amount
+        
+        if cleanliness.percentage < 20{
+            modified_amount = amount * 2
+        }
+        
+        if hunger.value < modified_amount {
+            health.minus(by: modified_amount / 10)
+        }
+        
+        hunger.minus(by: modified_amount)
     }
     
-    func minusBars(by: Int) {
-        hunger.minus(by)
-        cleanliness.minus(by)
-        fun.minus(by / 2)
-        energy.minus(by / 2)
+    func eat() {
+        hunger.add()
+        
+        spendEnergy(amount: 25)
+    }
+
+    func clean() {
+        cleanliness.add()
+        
+        fun.minus(by: 50)
+        spendEnergy(amount: 50)
+    }
+
+    func play() {
+        fun.add()
+        
+        cleanliness.minus(by: 50)
+        
+        spendHunger(amount: 50)
+        spendEnergy(amount: 80)
+    }
+    
+    func rest() {
+        energy.add()
+        
+        spendHunger(amount: 50)
+    }
+    
+    func minusBars() {
+        hunger.minus()
+        cleanliness.minus()
+        fun.minus()
+        energy.minus()
     }
 }

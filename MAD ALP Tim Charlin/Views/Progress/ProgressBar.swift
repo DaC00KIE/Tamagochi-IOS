@@ -60,6 +60,6 @@ struct ProgressBar: View {
 }
 
 #Preview {
-    @State var stat = Stat(type: .health, value: 100, max: 200)
+    @State var stat = Stat(type: .health)
     return ProgressBar(stat: $stat, frameWidth: 200)
 }

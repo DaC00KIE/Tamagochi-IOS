@@ -43,7 +43,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.hunger.isFull {
-                                tamagochi.eat(amount: 360)
+                                tamagochi.eat()
                                 
                             }
                         }) {
@@ -63,7 +63,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.cleanliness.isFull {
-                                tamagochi.clean(amount: 360)
+                                tamagochi.clean()
                             }
                         }) {
                             Text("Clean")
@@ -84,7 +84,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.fun.isFull{
-                                tamagochi.play(amount: 360)
+                                tamagochi.play()
                             }
                         }) {
                             Text("Play")
@@ -102,7 +102,7 @@ struct ProgressView: View {
                         
                         Button(action: {
                             if !tamagochi.energy.isFull{
-                                tamagochi.rest(amount: 360)
+                                tamagochi.rest()
                             }
                         }) {
                             Text("Rest")
@@ -120,7 +120,7 @@ struct ProgressView: View {
             }
             .padding(.top, -60)
             .onReceive(tamagochi.timer) { _ in
-                tamagochi.minusBars(by: 200)
+                tamagochi.minusBars()
             }
             
         }

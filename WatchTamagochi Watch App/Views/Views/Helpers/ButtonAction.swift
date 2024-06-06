@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ButtonAction: View {
-    @ObservedObject var tamagochi: Tamagochi
+    @StateObject var tamagochi: Tamagochi
     let statType: StatType
     
     var body: some View {
         Button(action:{
             switch statType{
             case .fun:
-                if !tamagochi.fun.isFull{
-                    tamagochi.play(amount: 360)
-                }
+                tamagochi.play()
+            case .hunger:
+                tamagochi.eat()
+            case .cleanliness:
+                tamagochi.clean()
+            case .energy:
+                tamagochi.rest()
             default:
                 Text("Wassup")
             }
@@ -26,12 +30,13 @@ struct ButtonAction: View {
             Text("\(tamagochi.getStat(statType).action)")
         }
         .frame(width: 150, height: 40)
-        .background(Color.blue)
+        .background(tamagochi.getStat(statType).isFull ? Color.gray : Color.blue)
+        .disabled(tamagochi.getStat(statType).isFull)
         .cornerRadius(10)
     }
 }
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return ButtonAction(tamagochi: tamagochi, statType: .fun)
+    return ButtonAction(tamagochi: tamagochi, statType: .energy)
 }

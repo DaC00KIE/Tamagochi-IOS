@@ -8,32 +8,30 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var currentPage = 2.0
+    @State private var currentPage = 1
     @State private var offset:CGFloat = 0.0
     @StateObject var tamagochi: Tamagochi
     
     var body: some View {
-        let statsDict: [Double: StatType] = [
-            1.0: .health,
-            2.0: .hunger,
-            3.0: .energy,
-            4.0: .fun,
-            5.0: .cleanliness
+        let statsDict: [Int: StatType] = [
+            1: .health,
+            2: .hunger,
+            3: .energy,
+            4: .fun,
+            5: .cleanliness
         ]
         
         VStack {
-            VStack(spacing: 10) { // Adjust spacing as needed
+            VStack{ // Adjust spacing as needed
                 if let statType = statsDict[currentPage] {
                     StatView(tamagochi: tamagochi, statType: statType)
-      
-                    if statType != .health{
-                        
-                    }
-                    
                 } else {
                   // Handle the case where statType is nil (e.g., display default text)
                   Text("Stat: N/A")
                 }
+                
+                HorizontalPageIndicator(currentPage: currentPage, maxPages: statsDict.count)
+                    .padding(.bottom, -5)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -44,15 +42,15 @@ struct HomeView: View {
             }
             .onEnded { _ in
               // Check swipe direction and update value
-              if offset > 20 {
-                  currentPage += 1.0 // Increase for right swipe
-                  if currentPage > 5.0{
-                      currentPage = 1.0
+              if offset < 20 {
+                  currentPage += 1 // Increase for right swipe
+                  if currentPage > 5{
+                      currentPage = 1
                   }
-              } else if offset < 20 {
-                  currentPage -= 1.0 // Decrease for left swipe
-                  if currentPage < 1.0{
-                      currentPage = 5.0
+              } else if offset > 20 {
+                  currentPage -= 1 // Decrease for left swipe
+                  if currentPage < 1{
+                      currentPage = 5
                   }
               }
               offset = 0.0 // Reset offset for next swipe

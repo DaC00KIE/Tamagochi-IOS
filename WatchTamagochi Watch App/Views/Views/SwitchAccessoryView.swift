@@ -17,8 +17,10 @@ struct SwitchAccessoryView: View {
         VStack{
             Text("Hats")
             
-            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 150)
-                .padding(.top, -20)
+            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 200)
+                .padding(.top, -40)
+                .padding(.bottom, -40)
+            
             
             ScrollableSelectionView(items: faces, selectedItem: $tamagochi.selectedFace)
         }
