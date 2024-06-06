@@ -15,6 +15,7 @@
 		04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF92C0F9F8000F7F134 /* Accessory.swift */; };
 		04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFB2C0FA02700F7F134 /* DataManager.swift */; };
 		04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */; };
+		041AA8FC2C11CAFF00DF9DE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AA8FB2C11CAFF00DF9DE6 /* User.swift */; };
 		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
@@ -69,6 +70,7 @@
 		04112AF92C0F9F8000F7F134 /* Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
 		04112AFB2C0FA02700F7F134 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagochiDisplay.swift; sourceTree = "<group>"; };
+		041AA8FB2C11CAFF00DF9DE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0429AA482C083FFA005E85F4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				04C996352C0EEEA9000F479A /* Tamagochi.swift */,
 				04112AF92C0F9F8000F7F134 /* Accessory.swift */,
+				041AA8FB2C11CAFF00DF9DE6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
 				14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */,
+				041AA8FC2C11CAFF00DF9DE6 /* User.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,
@@ -531,7 +535,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MAD ALP Tim Charlin/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -561,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MAD ALP Tim Charlin/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

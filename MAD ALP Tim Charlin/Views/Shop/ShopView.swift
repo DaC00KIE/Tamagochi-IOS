@@ -158,7 +158,8 @@ struct ShopView: View {
                                         }
                                         VStack {
                                             Button(action: {
-                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, type: item.type)
+                                                tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 200,  type: item.type)
+                                                SoundManager.inst.play(sound: .Complete)
                                             }) {
                                                 Text("Level: \(item.statKeyPath == \.hunger ? tamagotchi.hunger.max_lvl : item.statKeyPath == \.cleanliness ? tamagotchi.cleanliness.max_lvl : item.statKeyPath == \.fun ? tamagotchi.fun.max_lvl : tamagotchi.energy.max_lvl)")
                                                     .padding()
@@ -182,7 +183,7 @@ struct ShopView: View {
                         .padding()
                     }
                 } else if selectedShop == "Accessories" {
-                    AccessoriesView()
+                    AccessoriesView(tamagotchi: tamagotchi)
                 }
             }
             .navigationBarTitle("")

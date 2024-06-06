@@ -55,6 +55,15 @@ struct ContentView: View {
                 .onAppear {
                     SoundManager.inst.play(sound: .Tab)
                 }
+            UserProfileView()
+                .tabItem{
+                    Image("icon_upgrade_outlined")
+                    Text("Profile")
+                }
+                .tag(3)
+                .onAppear {
+                    SoundManager.inst.play(sound: .Tab)
+                }
         }
         
        
