@@ -24,6 +24,7 @@ class Tamagochi: ObservableObject {
     @Published var selectedHat: String
     
     @Published var skinColor: Color
+    @Published var coins: Int = 1000
     
     let timer = Timer.publish(every: 5.0, on: .main, in: .common).autoconnect()
     
@@ -33,6 +34,11 @@ class Tamagochi: ObservableObject {
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
         self.skinColor = Color.red
+    }
+    
+    static func generateNew() -> Tamagochi{
+        let tamagochi = Tamagochi()
+        return tamagochi
     }
     
     func getStat(_ type: StatType) -> Stat{
