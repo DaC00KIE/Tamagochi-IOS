@@ -11,7 +11,7 @@ import SwiftUI
 struct MAD_ALP_Tim_CharlinApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
         }
     }
 }

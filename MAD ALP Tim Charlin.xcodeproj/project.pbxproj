@@ -20,6 +20,14 @@
 		3F4BB7602C095A6900A54D1A /* UserProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BB75F2C095A6900A54D1A /* UserProfileEditor.swift */; };
 		3F4BB7622C095A7900A54D1A /* UserProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BB7612C095A7900A54D1A /* UserProfileDetails.swift */; };
 		3F4BB7642C095BD900A54D1A /* InitializePetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BB7632C095BD900A54D1A /* InitializePetView.swift */; };
+		04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF42C0F7CE300F7F134 /* CustomizeView.swift */; };
+		04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF92C0F9F8000F7F134 /* Accessory.swift */; };
+		04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFB2C0FA02700F7F134 /* DataManager.swift */; };
+		04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */; };
+		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
+		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
+		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
+		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
@@ -40,6 +48,14 @@
 		3F4BB75F2C095A6900A54D1A /* UserProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEditor.swift; sourceTree = "<group>"; };
 		3F4BB7612C095A7900A54D1A /* UserProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetails.swift; sourceTree = "<group>"; };
 		3F4BB7632C095BD900A54D1A /* InitializePetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializePetView.swift; sourceTree = "<group>"; };
+		04112AF42C0F7CE300F7F134 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
+		04112AF92C0F9F8000F7F134 /* Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
+		04112AFB2C0FA02700F7F134 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagochiDisplay.swift; sourceTree = "<group>"; };
+		0429AA482C083FFA005E85F4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
+		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -77,10 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */,
-				0418E88A2C084D5F00138599 /* Views */,
-				0418E8892C084D5800138599 /* Models */,
+				04C996322C0EEE60000F479A /* Views */,
+				04C996332C0EEE80000F479A /* Models */,
+				04C996342C0EEE85000F479A /* Resources */,
 				040E41292BF5D34500358910 /* Assets.xcassets */,
-				040E412C2BF5D34500358910 /* Preview Assets.xcassets */,
 				040E412B2BF5D34500358910 /* Preview Content */,
 			);
 			path = "MAD ALP Tim Charlin";
@@ -89,58 +105,95 @@
 		040E412B2BF5D34500358910 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				040E412C2BF5D34500358910 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0418E8892C084D5800138599 /* Models */ = {
+		04112AF32C0F7CC400F7F134 /* Customize */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				3F4BB74E2C084C2700A54D1A /* User.swift */,
 				3F4BB7572C0956D200A54D1A /* Pet.swift */,
 				3F4BB74C2C08460700A54D1A /* ModelData.swift */,
+=======
+				04112AF42C0F7CE300F7F134 /* CustomizeView.swift */,
+>>>>>>> eebc3bcb3955c868fdbd8c7a171588268316547a
 			);
-			path = Models;
+			path = Customize;
 			sourceTree = "<group>";
 		};
-		0418E88A2C084D5F00138599 /* Views */ = {
+		04112AFE2C10008300F7F134 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04C996322C0EEE60000F479A /* Views */ = {
+			isa = PBXGroup;
+			children = (f
 				3F4BB7592C0957E600A54D1A /* FirstPlayView.swift */,
 				3F4BB7632C095BD900A54D1A /* InitializePetView.swift */,
-				0418E88C2C084D7E00138599 /* Profile */,
 				0418E88B2C084D7200138599 /* Support */,
 				040E41272BF5D34400358910 /* ContentView.swift */,
+				04112AFE2C10008300F7F134 /* Helpers */,
+				04112AF32C0F7CC400F7F134 /* Customize */,
+				04C996372C0F0FD6000F479A /* Shop */,
+				14456E3E2C0840A600F24E96 /* Profile */,
+				14456E3F2C0840CC00F24E96 /* Progress */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0418E88B2C084D7200138599 /* Support */ = {
+		04C996332C0EEE80000F479A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3FD2608A2C00310A0076637D /* CircleImage.swift */,
+				04C996352C0EEEA9000F479A /* Tamagochi.swift */,
+				04112AF92C0F9F8000F7F134 /* Accessory.swift */,
 			);
-			path = Support;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		0418E88C2C084D7E00138599 /* Profile */ = {
+		04C996342C0EEE85000F479A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04112AFB2C0FA02700F7F134 /* DataManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04C996372C0F0FD6000F479A /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				14456E402C08417F00F24E96 /* ShopView.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		14456E3E2C0840A600F24E96 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				3FD260882C0028B60076637D /* ProfileView.swift */,
 				3F4BB75D2C095A5000A54D1A /* ProfileDetails.swift */,
 				3F4BB75F2C095A6900A54D1A /* UserProfileEditor.swift */,
 				3F4BB7612C095A7900A54D1A /* UserProfileDetails.swift */,
+				3FD2608A2C00310A0076637D /* CircleImage.swift */,
 				3FD2608E2C0032280076637D /* UserProfileView.swift */,
 				3F4BB75B2C09593000A54D1A /* ProfileEditor.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		3F4BB7502C0954B300A54D1A /* Recovered References */ = {
+		14456E3F2C0840CC00F24E96 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				0429AA482C083FFA005E85F4 /* ProgressView.swift */,
+				04C996382C0F0FF4000F479A /* ProgressBar.swift */,
 			);
-			name = "Recovered References";
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +268,9 @@
 			files = (
 				3F4BB7642C095BD900A54D1A /* InitializePetView.swift in Sources */,
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
+				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
+				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
+				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3F4BB75C2C09593000A54D1A /* ProfileEditor.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
@@ -225,8 +281,13 @@
 				3F4BB7622C095A7900A54D1A /* UserProfileDetails.swift in Sources */,
 				3F4BB75E2C095A5000A54D1A /* ProfileDetails.swift in Sources */,
 				3F4BB7602C095A6900A54D1A /* UserProfileEditor.swift in Sources */,
+				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
+				04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */,
+				04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */,
 				040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */,
+				0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */,
+				04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +428,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,6 +457,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
