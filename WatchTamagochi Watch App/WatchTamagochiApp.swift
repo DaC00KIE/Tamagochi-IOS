@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WatchTamagochi_Watch_AppApp: App {
+    @StateObject var tamagochi = Tamagochi()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(tamagochi: tamagochi)
         }
     }
 }

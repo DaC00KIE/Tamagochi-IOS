@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentPage: Int = 1
+    @State private var offset:CGFloat = 0.0
+    @StateObject var tamagochi: Tamagochi
+    
     var body: some View {
-        VStack {
-            Image("hat_christmas")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                HomeView(tamagochi: tamagochi)
+            }
         }
-        .padding()
+        .frame(width: .infinity, height: .infinity)
     }
 }
 
 #Preview {
-    ContentView()
+    @StateObject var tamagochi = Tamagochi()
+    return ContentView(tamagochi: tamagochi)
 }

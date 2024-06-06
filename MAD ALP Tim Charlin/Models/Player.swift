@@ -12,10 +12,9 @@ class Player: ObservableObject, Identifiable{
     @Published var name: String
     @Published var coins: Int
     
-    @Published var tamagochi: Tamagochi
+//    @Published var accessories: [Accessory]
     
     let dateStarted: Date
-    
     var currentTime: Date{
         return Date.now
     }
@@ -28,6 +27,5 @@ class Player: ObservableObject, Identifiable{
         self.id = id
         self.name = name
         self.coins = 1000
-        self.tamagochi = Tamagochi.generateNew()
     }
 }

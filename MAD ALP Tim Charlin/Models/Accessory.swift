@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Accessory: Codable, Identifiable, Hashable{
-    var id: Int
+struct Accessory: Hashable{
     var name: String
+    var isOwned: Bool = false
+    var price: Int = 200
+    
     var icon: String{
         return name + "_icon"
     }
     
-    enum AccessoryType: String, CaseIterable, Codable{
+    enum AccessoryType: String, CaseIterable{
         case face = "Face"
         case hat = "Hat"
     }
