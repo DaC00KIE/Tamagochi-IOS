@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WatchSwitchAccessories: View {
+struct SwitchAccessoryView: View {
     @StateObject var tamagochi: Tamagochi
     
     var faces: [String] = ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"]
@@ -29,5 +29,5 @@ struct WatchSwitchAccessories: View {
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return WatchSwitchAccessories(tamagochi: tamagochi)
+    return SwitchAccessoryView(tamagochi: tamagochi)
 }

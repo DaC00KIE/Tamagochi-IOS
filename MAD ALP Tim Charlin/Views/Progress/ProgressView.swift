@@ -19,6 +19,7 @@ struct ProgressView: View {
     var body: some View {
         
         VStack{
+            Spacer()
             ZStack{
                 TamagochiDisplay(tamagochi: tamagochi, frame: 300)
                     .padding(.top, 20)
@@ -118,7 +119,7 @@ struct ProgressView: View {
                     }
                     .padding(.horizontal)
                 }
-                .padding(.bottom)
+                .padding(.bottom, 50)
                 
     //            Text("Shop")
     //                .padding()
@@ -133,7 +134,7 @@ struct ProgressView: View {
     //                    Content_View(tamagochi: tamagochi)
     //                }
 
-                Spacer()
+//                Spacer()
             }
             .padding(.top, -60)
             .onReceive(defaultTimer) { _ in

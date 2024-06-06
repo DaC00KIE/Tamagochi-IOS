@@ -14,11 +14,6 @@ struct StatView: View {
     var body: some View {
         
         VStack{
-            Text("\(tamagochi.name)")
-            
-            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 150)
-                .padding(.top, -20)
-                .padding(.bottom, -30)
             
             Text("\(statType.rawValue)")
             
@@ -35,6 +30,27 @@ struct StatView: View {
                 ProgressBar(stat: $tamagochi.health, frameWidth: 150)
             }
             
+            WatchDisplayTamagochi(tamagochi: tamagochi, frame: 150)
+                .padding(.top, -20)
+                .padding(.bottom, -30)
+            
+            switch statType{
+            case .fun:
+                Button(action:{
+                    if !tamagochi.fun.isFull{
+                        tamagochi.play(amount: 360)
+                    }
+                }){
+                    Text("Play")
+                }
+                .frame(width: 150, height: 40)
+                .background(Color.blue)
+                .cornerRadius(10)
+
+            default:
+                Text("\(tamagochi.name)")
+            }
+            
 //            Spacer()
             
         }
@@ -43,5 +59,5 @@ struct StatView: View {
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return StatView(tamagochi: tamagochi, statType: .health)
+    return StatView(tamagochi: tamagochi, statType: .fun)
 }
