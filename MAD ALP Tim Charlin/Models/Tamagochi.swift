@@ -17,11 +17,11 @@ import SwiftUI
 class Tamagochi: ObservableObject{
     var name: String
     
-    @Published var health = Stat(value: 100, max: 100)
-    @Published var hunger = Stat(value: 1800, max: 3600)
-    @Published var cleanliness = Stat(value: 1800, max: 3600)
-    @Published var fun = Stat(value: 1800, max: 3600)
-    @Published var energy = Stat(value: 1800, max: 3600)
+    @Published var health = Stat(type: .health, value: 100, max: 100)
+    @Published var hunger = Stat(type: .hunger, value: 1800, max: 3600)
+    @Published var cleanliness = Stat(type: .cleanliness, value: 1800, max: 3600)
+    @Published var fun = Stat(type: .fun, value: 1800, max: 3600)
+    @Published var energy = Stat(type: .energy, value: 1800, max: 3600)
     
     @Published var characterImage: UIImage
     @Published var faceImage: UIImage? = UIImage(named:"Default_face")
@@ -34,6 +34,21 @@ class Tamagochi: ObservableObject{
         self.characterImage = UIImage(named: "character")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
+    }
+    
+    func getStat(_ type: StatType) -> Stat{
+        switch type{
+        case .health:
+            return health
+        case .hunger:
+            return hunger
+        case .cleanliness:
+            return cleanliness
+        case .fun:
+            return fun
+        default:
+            return energy
+        }
     }
     
     func eat(amount: Int) {
@@ -71,36 +86,4 @@ class Tamagochi: ObservableObject{
         fun.minus(by/2)
         energy.minus(by/2)
     }
-}
-
-struct Stat{
-    var value: Int
-    var max: Int
-    
-    var percentage: Int{
-        guard max > 0 else { return 0 }
-        let percentage = Double(value) / Double(max) * 100
-        return Int(round(percentage))
-    }
-    
-    var isFull: Bool{
-        if value < max{
-            return false
-        }
-        return true
-    }
-    
-    mutating func add(_ amount: Int){
-        value = min(value + amount, max)
-    }
-    
-    mutating func minus(_ amount: Int){
-        // not using max(value - amount, 0) because conflict w var name
-        value -= amount
-        if value < 0{
-            value = 0
-        }
-    }
-    
-
 }

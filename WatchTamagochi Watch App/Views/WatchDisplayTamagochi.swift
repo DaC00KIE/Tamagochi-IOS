@@ -17,6 +17,11 @@ struct WatchDisplayTamagochi: View {
       var body: some View {
         ZStack {
           // Assuming characterImage is a String referencing an asset
+            Image("character_color")
+                .resizable()
+                .scaledToFit()
+                .frame(width: frameSize, height: frameSize)
+                
           Image("character_outline")
             .resizable()
             .scaledToFit()
@@ -36,6 +41,6 @@ struct WatchDisplayTamagochi: View {
 
 #Preview {
     @StateObject var tamagochi = Tamagochi()
-    return WatchDisplayTamagochi(tamagochi: tamagochi, frame: 100)
+    return WatchDisplayTamagochi(tamagochi: tamagochi, frame: 250)
     
 }
