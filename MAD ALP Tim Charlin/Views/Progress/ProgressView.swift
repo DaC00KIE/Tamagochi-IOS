@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct ProgressView: View {
-<<<<<<< HEAD
-    @StateObject private var tamagochi = Tamagochi()
-    @StateObject private var tamagotchi = Tamagochi()
-=======
     @StateObject var tamagochi: Tamagochi
->>>>>>> main-backup
     
     @State private var currentDate = Date.now
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -25,58 +20,12 @@ struct ProgressView: View {
     let defaultFrameWidth = 100
     
     var body: some View {
-<<<<<<< HEAD
-        VStack {
-            Text("Tamagochi")
-                .font(.largeTitle)
-                .padding()
-            
-            Text("Health: \(tamagochi.health.value)/ \(tamagochi.health.max)")
-            
-            HStack {
-                VStack {
-                    Text("Hunger \(tamagochi.hunger.value)")
-                    ProgressBar(stat: $tamagochi.hunger)
-                }
-                VStack {
-                    Text("Cleanliness \(tamagochi.cleanliness.value)")
-                    ProgressBar(stat: $tamagochi.cleanliness)
-                }
-            }
-            .padding()
-            
-            HStack {
-                VStack {
-                    Text("Fun \(tamagochi.fun.value)")
-                    ProgressBar(stat: $tamagochi.fun)
-                }
-                VStack {
-                    Text("Energy \(tamagochi.energy.value)")
-                    ProgressBar(stat: $tamagochi.energy)
-                }
-            }
-            .padding()
-            
-            HStack {
-                Button(action: {
-                    if !tamagochi.hunger.isFull {
-                        tamagochi.eat(amount: 100)
-                    }
-                }) {
-                    Text("Feed")
-                }
-                .padding()
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-=======
         
         VStack{
             ZStack{
                 TamagochiDisplay(tamagochi: tamagochi, frame: 300)
                     .padding(.top, 20)
                     .padding(.bottom, -50)
->>>>>>> main-backup
                 
                 VStack{
                     VStack {
@@ -170,28 +119,8 @@ struct ProgressView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     }
-<<<<<<< HEAD
-                }) {
-                    Text("Rest")
-//                    Text("Rest \(!tamagochi.energy.isFull)")
-=======
-                    .padding(.horizontal)
->>>>>>> main-backup
                 }
                 .padding(.bottom)
-                
-    //            Text("Shop")
-    //                .padding()
-    //                .frame(width: CGFloat(defaultFrameWidth) * 2 + 40)
-    //                .background(Color.orange)
-    //                .foregroundColor(.white)
-    //                .cornerRadius(10)
-    //                .onTapGesture {
-    //                    self.isClickedToShop = true
-    //                }
-    //                .fullScreenCover(isPresented: $isClickedToShop) {
-    //                    Content_View(tamagochi: tamagochi)
-    //                }
 
                 Spacer()
             }
@@ -199,29 +128,13 @@ struct ProgressView: View {
             .onReceive(defaultTimer) { _ in
                 tamagochi.minusBars(by: 200)
             }
-            
-<<<<<<< HEAD
-//            Text("Shop")
-//            .padding()
-//            .background(Color.orange)
-//            .foregroundColor(.white)
-//            .cornerRadius(10)
-//            .onTapGesture {
-//                self.isClickedToShop = true
-//            }
-//            .fullScreenCover(isPresented: $isClickedToShop) {
-//                Upgrade_Item(tamagotchi: tamagotchi)
-//            }
-//            Spacer()
+
         }
         .onReceive(defaultTimer) { _ in
             tamagochi.minusBars(by: 200)
         }
-=======
-        }
-        
-        
->>>>>>> main-backup
+
+
     }
 }
 

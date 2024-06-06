@@ -7,49 +7,7 @@
 
 import SwiftUI
 
-
-
-//struct ContentView: View {
-//    var body: some View {
-//        /*VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
-//            Text("Hello, world!")
-//        }
-//        .padding()*/
-//        ProfileTextContainer(titleText: "Username", text:"Video")
-//    }
-//}
-
 struct ContentView: View {
-<<<<<<< HEAD
-    @StateObject private var tamagotchi = Tamagochi()
-    
-    var body: some View {
-        TabView {
-            Upgrade_Item(tamagotchi: tamagotchi)
-                .tabItem {
-                    Label("Upgrade", systemImage: "arrow.up.circle")
-                }
-            Text("Accessories Page")
-                .tabItem {
-                    Label("Accessories", systemImage: "star.circle")
-                }
-            Text("Gacha Page")
-                .tabItem {
-                    Label("Gacha", systemImage: "gift.circle")
-                }
-        }
-    }
-}
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-=======
     @State var tamagochi: Tamagochi
     @State var selectedTab = 0
     
@@ -62,7 +20,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            ShopView(tamagochi: tamagochi)
+            ShopView(tamagotchi: tamagochi)
                 .tabItem{
                     Image("icon_upgrade_outlined")
                     Text("Shop")
@@ -80,10 +38,8 @@ struct ContentView: View {
        
     }
 }
->>>>>>> main-backup
 
 #Preview {
     @State var pet = Tamagochi()
     return ContentView(tamagochi: pet)
 }
-
