@@ -390,11 +390,8 @@
 				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
 				1467A3682C11C3EC00FA0D4C /* UpgradeItem.swift in Sources */,
 				14221A602C118448001A6FE1 /* AccessoriesView.swift in Sources */,
-<<<<<<< HEAD
 				1467A3702C11C4A300FA0D4C /* UpgradeItemView.swift in Sources */,
-=======
 				041AA8FC2C11CAFF00DF9DE6 /* User.swift in Sources */,
->>>>>>> a9c29f187f0b889c9d41d8d62a2f4a512d2beafd
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				1467A36E2C11C47A00FA0D4C /* UpgradeItemsView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
