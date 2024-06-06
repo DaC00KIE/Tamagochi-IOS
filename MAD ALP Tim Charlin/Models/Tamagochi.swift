@@ -143,6 +143,7 @@ class Tamagochi: ObservableObject{
 struct Stat {
     var value: Int
     var base_max: Int
+    var max_lvl: Int = 20
     var barLevel: Int = 0
     var actionLevel: Int = 0
     var timerLevel: Int = 0
