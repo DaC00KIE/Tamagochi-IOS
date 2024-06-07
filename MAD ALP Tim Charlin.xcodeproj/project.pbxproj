@@ -16,6 +16,7 @@
 		04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFB2C0FA02700F7F134 /* DataManager.swift */; };
 		04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */; };
 		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
+		0452F5902C12D4D90089E330 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		046851162C12266500B34914 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851152C12266500B34914 /* Stat.swift */; };
 		046851192C12269F00B34914 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851182C12269F00B34914 /* ScrollableSelectionView.swift */; };
 		0468511E2C122A2A00B34914 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851182C12269F00B34914 /* ScrollableSelectionView.swift */; };
@@ -45,7 +46,6 @@
 		04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */; };
 		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
-		3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
 		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
 		3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA92C11722C009C1290 /* Failed.wav */; };
 		3FCA8EAE2C11722C009C1290 /* Tab.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EAA2C11722C009C1290 /* Tab.wav */; };
@@ -432,10 +432,10 @@
 				0468513C2C12379800B34914 /* ShopHeaderView.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
-				3FCA8EA62C117101009C1290 /* SoundManager.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
 				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
+				0452F5902C12D4D90089E330 /* SoundManager.swift in Sources */,
 				04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */,
 				046851422C1238E900B34914 /* UpgradeItemView.swift in Sources */,
 				0468513E2C12387600B34914 /* ShopSelectionView.swift in Sources */,
