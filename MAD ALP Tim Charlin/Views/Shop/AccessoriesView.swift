@@ -4,20 +4,19 @@
 //
 //  Created by Charlin Leo on 05/06/24.
 //
-
 import SwiftUI
 
 struct AccessoryItem: Identifiable {
-    let id = UUID()
-    let name: String
-    let imageName: String
-    let cost: Int
-    let type: AccessoryType
-    
-    enum AccessoryType {
-        case face
-        case hat
-    }
+    var id = UUID()
+    var name: String
+    var imageName: String
+    var cost: Int
+    var type: AccessoryType
+}
+
+enum AccessoryType {
+    case hat
+    case face
 }
 
 struct AccessoriesView: View {
@@ -35,14 +34,14 @@ struct AccessoriesView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 20) {
+            LazyVGrid(columns: [GridItem(.flexible(minimum: 150, maximum: 200), spacing: 20), GridItem(.flexible(minimum: 150, maximum: 200), spacing: 20)], spacing: 20) {
                 ForEach(accessories) { accessory in
                     VStack {
                         Text(accessory.name)
-                        Image(accessory.imageName)
+                        Image("\(accessory.imageName)_icon")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 100, height: 100)
                         Spacer()
                         Button(action: {
                             if tamagotchi.coins >= accessory.cost {
@@ -70,5 +69,11 @@ struct AccessoriesView: View {
             }
             .padding()
         }
+    }
+}
+
+struct AccessoriesView_Previews: PreviewProvider {
+    static var previews: some View {
+        AccessoriesView(tamagotchi: Tamagochi())
     }
 }

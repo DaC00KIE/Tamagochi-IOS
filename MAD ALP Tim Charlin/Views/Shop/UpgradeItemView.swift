@@ -23,10 +23,12 @@ struct UpgradeItemView: View {
                         .font(.headline)
                     Text(item.description)
                         .font(.subheadline)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
+                Spacer()
                 VStack {
                     Button(action: {
-                        tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type)
+                        tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type.rawValue)
                     }) {
                         Text("Level: \(getLevel(for: item))")
                             .padding()
@@ -35,27 +37,28 @@ struct UpgradeItemView: View {
                             .cornerRadius(10)
                     }
                     .disabled(tamagotchi.coins < item.cost)
-                    Spacer()
                     Text("\(item.cost) Coins")
                         .font(.subheadline)
+                        .padding(.top, 5)
                 }
             }
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal, UIDevice.current.userInterfaceIdiom == .pad ? 20 : 0) // Add padding for iPad
         }
-        .padding()
-        .background(Color.gray.opacity(0.2))
-        .cornerRadius(10)
+        .frame(maxWidth: UIDevice.current.userInterfaceIdiom == .pad ? 600 : .infinity) // Limit width for iPad
+        .padding(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 0)
     }
     
     private func getLevel(for item: UpgradeItem) -> Int {
-            switch item.type {
-            case "Capacity":
-                return tamagotchi[keyPath: item.statKeyPath].barLevel
-            case "Action":
-                return tamagotchi[keyPath: item.statKeyPath].actionLevel
-            case "Timer":
-                return tamagotchi[keyPath: item.statKeyPath].timerLevel
-            default:
-                return 0
-            }
+        switch item.type {
+        case .capacity:
+            return tamagotchi[keyPath: item.statKeyPath].max_lvl
+        case .action:
+            return tamagotchi[keyPath: item.statKeyPath].increase_lvl
+        case .timer:
+            return tamagotchi[keyPath: item.statKeyPath].reduction_lvl
         }
+    }
 }

@@ -20,7 +20,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            ShopView(tamagochi: tamagochi)
+            ShopView(tamagotchi: tamagochi)
                 .tabItem{
                     Image("icon_upgrade_outlined")
                     Text("Shop")

@@ -8,10 +8,6 @@ import SwiftUI
 
 struct CustomizeView: View {
     @StateObject var tamagochi: Tamagochi
-//    @State private var color = Color.red
-    
-    var faces: [String] = ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"]
-    var hats: [String] = ["hat_none", "hat_christmas", "hat_mexican"]
     
     @State private var showColorPicker = false
     
@@ -22,8 +18,8 @@ struct CustomizeView: View {
             TamagochiDisplay(tamagochi: tamagochi, frame: 500)
             
             VStack {
-                ScrollableSelectionView(items: faces, selectedItem: $tamagochi.selectedFace)
-                ScrollableSelectionView(items: hats, selectedItem: $tamagochi.selectedHat)
+                ScrollableSelectionView(items: tamagochi.purchasedFaces, selectedItem: $tamagochi.selectedFace)
+                ScrollableSelectionView(items: tamagochi.purchasedHats, selectedItem: $tamagochi.selectedHat)
                 
                 
                 ColorPicker("Pick a Colour: ", selection: $tamagochi.skinColor)

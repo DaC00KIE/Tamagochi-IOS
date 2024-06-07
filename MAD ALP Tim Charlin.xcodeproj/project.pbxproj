@@ -256,10 +256,10 @@
 		04C996372C0F0FD6000F479A /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				14456E402C08417F00F24E96 /* ShopView.swift */,
 				046851372C1231F100B34914 /* AccessoriesView.swift */,
 				0468513B2C12379800B34914 /* ShopHeaderView.swift */,
 				0468513D2C12387600B34914 /* ShopSelectionView.swift */,
+				14456E402C08417F00F24E96 /* ShopView.swift */,
 				046851412C1238E900B34914 /* UpgradeItemView.swift */,
 				046851432C12392000B34914 /* UpgradeView.swift */,
 			);
