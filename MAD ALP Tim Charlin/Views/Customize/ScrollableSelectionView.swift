@@ -39,6 +39,9 @@ struct ScrollableSelectionView: View {
                                     }
                                     .onChange(of: isCentered) { newValue in
                                         if newValue {
+                                            #if os(iOS)
+                                            SoundManager.inst.play(sound: .Choose)
+                                            #endif
                                             selectedItem = item
                                         }
                                     }

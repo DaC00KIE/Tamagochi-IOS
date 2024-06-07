@@ -36,7 +36,7 @@ class Tamagochi: ObservableObject {
         self.characterImage = UIImage(named: "character_outline")!
         self.selectedFace = "face_default"
         self.selectedHat = "hat_none"
-        self.skinColor = Color.red
+        self.skinColor = Color.blue
     }
     
     static func generateNew() -> Tamagochi{

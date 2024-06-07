@@ -15,6 +15,7 @@ struct ShopSelectionView: View {
         HStack {
             Button(action: {
                 selectedShop = "Upgrade"
+                SoundManager.inst.play(sound: .Failed)
             }) {
                 Text("Upgrade")
                     .padding()
@@ -25,6 +26,7 @@ struct ShopSelectionView: View {
             
             Button(action: {
                 selectedShop = "Accessories"
+                SoundManager.inst.play(sound: .Failed)
             }) {
                 Text("Accessories")
                     .padding()

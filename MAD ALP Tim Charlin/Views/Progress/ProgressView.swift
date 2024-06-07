@@ -16,17 +16,24 @@ struct ProgressView: View {
         
         VStack{
             Spacer()
-            ZStack{
-                TamagochiDisplay(tamagochi: tamagochi, frame: 300)
-                    .padding(.top, 20)
-                    .padding(.bottom, -50)
-                
-                VStack{
-                    VStack {
-                        Text("Health")
-                        ProgressBar(stat: $tamagochi.health, frameWidth: defaultFrameWidth * 2 + 40)
+            
+            ZStack {
+                    Image("pillar-hd")
+                        .resizable()
+                        .aspectRatio(1.3, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                ZStack{
+                    TamagochiDisplay(tamagochi: tamagochi, frame: 300)
+                        .padding(.top,-100)
+                        .padding(.bottom, -50)
+                    
+                    
+                    VStack{
+                        VStack {
+                            Text("Health")
+                            ProgressBar(stat: $tamagochi.health, frameWidth: defaultFrameWidth * 2 + 40)
+                        }
+                        Spacer()
                     }
-                    Spacer()
                 }
             }
             
