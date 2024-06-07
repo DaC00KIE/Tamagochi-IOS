@@ -92,7 +92,7 @@ struct Stat{
     }
     
     mutating func timerReduction(){
-        reduction_lvl -= 1
+        reduction_lvl += 1
     }
 
 }

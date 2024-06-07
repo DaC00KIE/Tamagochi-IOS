@@ -115,18 +115,47 @@ struct ShopView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ShopHeaderView(coins: tamagotchi.coins)
-                ShopSelectionView(selectedShop: $selectedShop)
-                if selectedShop == "Upgrade" {
-                    UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
-                } else if selectedShop == "Accessories" {
-                    AccessoriesView(tamagotchi: tamagotchi)
+        Group {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                //                NavigationSplitView {
+                //                    List {
+                //                        Button("Upgrade") {
+                //                            selectedShop = "Upgrade"
+                //                        }
+                //                        Button("Accessories") {
+                //                            selectedShop = "Accessories"
+                //                        }
+                //                    }
+                //                    .navigationTitle("Shop Categories")
+                //                } detail: {
+                    VStack {
+                        ShopHeaderView(coins: tamagotchi.coins)
+                        ShopSelectionView(selectedShop: $selectedShop)
+                        if selectedShop == "Upgrade" {
+                            UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
+                        } else if selectedShop == "Accessories" {
+                            AccessoriesView(tamagotchi: tamagotchi)
+                        }
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+            }
+//        }
+            else {
+                NavigationView {
+                    VStack {
+                        ShopHeaderView(coins: tamagotchi.coins)
+                        ShopSelectionView(selectedShop: $selectedShop)
+                        if selectedShop == "Upgrade" {
+                            UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
+                        } else if selectedShop == "Accessories" {
+                            AccessoriesView(tamagotchi: tamagotchi)
+                        }
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
                 }
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
     }
 }

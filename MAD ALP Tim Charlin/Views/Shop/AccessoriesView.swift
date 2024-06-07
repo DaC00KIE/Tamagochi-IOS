@@ -34,14 +34,14 @@ struct AccessoriesView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 20) {
+            LazyVGrid(columns: [GridItem(.flexible(minimum: 150, maximum: 200), spacing: 20), GridItem(.flexible(minimum: 150, maximum: 200), spacing: 20)], spacing: 20) {
                 ForEach(accessories) { accessory in
                     VStack {
                         Text(accessory.name)
                         Image(accessory.imageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 100, height: 100)
                         Spacer()
                         Button(action: {
                             if tamagotchi.coins >= accessory.cost {
