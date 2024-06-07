@@ -11,24 +11,52 @@ import AVKit
 class SoundManager {
     static let inst = SoundManager()
     
-    var player: AVAudioPlayer?
+    var players: [SoundOption: [AVAudioPlayer]] = [:]
     
-    enum SoundOption: String {
+    enum SoundOption: String, CaseIterable {
         case Choose
         case Complete
         case Failed
         case Tab
     }
     
-    func play(sound: SoundOption){
-        
-        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") else { return }
+    private init() {
+        preloadSounds()
+    }
     
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        } catch let error {
-            print("Error Playing Sound. \(error.localizedDescription)")
+    private func preloadSounds() {
+        for sound in SoundOption.allCases {
+            players[sound] = []
+            if let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") {
+                do {
+                    for _ in 0..<5 {
+                        let player = try AVAudioPlayer(contentsOf: url)
+                        player.prepareToPlay()
+                        players[sound]?.append(player)
+                    }
+                } catch {
+                    print("Error preloading sound \(sound.rawValue): \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+    
+    func play(sound: SoundOption) {
+        guard let playerList = players[sound] else { return }
+        
+        if let availablePlayer = playerList.first(where: { !$0.isPlaying }) {
+            availablePlayer.play()
+        } else {
+            if let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") {
+                do {
+                    let newPlayer = try AVAudioPlayer(contentsOf: url)
+                    newPlayer.prepareToPlay()
+                    players[sound]?.append(newPlayer)
+                    newPlayer.play()
+                } catch {
+                    print("Error creating new player for sound \(sound.rawValue): \(error.localizedDescription)")
+                }
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ struct UpgradeItemView: View {
                 VStack {
                     Button(action: {
                         tamagotchi.buyUpgrade(stat: item.statKeyPath, cost: item.cost, increaseAmount: 1, type: item.type.rawValue)
+                        SoundManager.inst.play(sound: .Complete)
                     }) {
                         Text("Level: \(getLevel(for: item))")
                             .padding()

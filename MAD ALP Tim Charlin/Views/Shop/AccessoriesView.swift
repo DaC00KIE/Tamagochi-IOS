@@ -46,6 +46,7 @@ struct AccessoriesView: View {
                         Button(action: {
                             if tamagotchi.coins >= accessory.cost {
                                 tamagotchi.coins -= accessory.cost
+                                SoundManager.inst.play(sound: .Complete)
                                 if accessory.type == .face {
                                     tamagotchi.purchasedFaces.append(accessory.imageName)
                                 } else if accessory.type == .hat {
