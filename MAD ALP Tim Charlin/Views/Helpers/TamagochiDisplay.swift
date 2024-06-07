@@ -10,34 +10,42 @@
 //
 //  Created by Patrick Steven Kent Sugiarto on 05/06/24.
 //
+
 import SwiftUI
 
 struct TamagochiDisplay: View {
     @ObservedObject var tamagochi: Tamagochi
     var frame: Int
-    private var frameSize: CGFloat{
+    private var frameSize: CGFloat {
         return CGFloat(frame)
     }
     
     var body: some View {
         ZStack {
-            Image(uiImage: tamagochi.characterImage)
+            // Character outline
+            Image("character_outline")
+                .resizable()
+                .scaledToFit()
+                .frame(width: frameSize, height: frameSize)
+            
+            // Character color overlay
+            Image("character_color")
                 .resizable()
 //                .scaledToFit()
                 .frame(width: frameSize, height: frameSize)
-                .background(Color(tamagochi.skinColor))
-//                .clipShape(Circle())
+                .colorMultiply(tamagochi.skinColor)
             
-            if let faceImage = UIImage(named: "\(tamagochi.selectedFace)") {
-                            Image(uiImage: faceImage)
-                                .resizable()
-                                .frame(width: frameSize, height: frameSize)
-                        }
-                        if let hatImage = UIImage(named: "\(tamagochi.selectedHat)") {
-                            Image(uiImage: hatImage)
-                                .resizable()
-                                .frame(width: frameSize, height: frameSize)
-                        }
+            // Selected face
+            Image("\(tamagochi.selectedFace)")
+                .resizable()
+                .scaledToFit()
+                .frame(width: frameSize, height: frameSize)
+            
+            // Selected hat
+            Image("\(tamagochi.selectedHat)")
+                .resizable()
+                .scaledToFit()
+                .frame(width: frameSize, height: frameSize)
         }
     }
 }
