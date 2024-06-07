@@ -1,109 +1,166 @@
-////
-////  Upgrade View.swift
-////  MAD ALP Tim Charlin
-////
-////  Created by Charlin Leo on 30/05/24.
-////
 //
-//import SwiftUI
+//  Upgrade View.swift
+//  MAD ALP Tim Charlin
 //
+//  Created by Charlin Leo on 30/05/24.
 //
-//
-//
-//struct UpgradeItem: Identifiable {
-//    let id = UUID()
-//    let name: String
-//    let cost: Int
-////    let effect: (ProgressViewModel) -> Void
-//}
-//
-//struct ShopView: View {
-//    @State var tamagochi: Tamagochi
-//    @State private var coins: Int = 10000
-//    @State private var isClickedToBack: Bool = false
-//    
-////    @State private var upgradeItems: [UpgradeItem] = [
-////        UpgradeItem(name: "Speed Boost", cost: 200, effect: { $0.maxHunger += 90 }),
-////        UpgradeItem(name: "Double Points", cost: 300, effect: { $0.maxCleanliness += 90 }),
-////        UpgradeItem(name: "Extra Life", cost: 400, effect: { $0.maxHappiness += 90 }),
-////        UpgradeItem(name: "Invincibility", cost: 500, effect: { $0.maxEnergy += 90 })
-////    ]
-//
-//    var body: some View {
-//        NavigationView {
-//            VStack {
-//                Text("Coins: \(coins)")
-//                    .font(.title)
-//                    .padding()
-//
-////                ScrollView {
-////                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-////                        ForEach(upgradeItems) { item in
-////                            VStack {
-////                                Text(item.name)
-////                                    .font(.headline)
-////                                Text("\(item.cost) Coins")
-////                                    .font(.subheadline)
-////                                Button(action: {
-////                                    if coins >= item.cost {
-////                                        coins -= item.cost
-////                                    }
-////                                }) {
-////                                    Text("Buy")
-////                                        .padding()
-////                                        .background(Color.blue)
-////                                        .foregroundColor(.white)
-////                                        .cornerRadius(10)
-////                                }
-////                                .disabled(coins < item.cost)
-////                            }
-////                            .padding()
-////                            .background(Color.gray.opacity(0.2))
-////                            .cornerRadius(10)
-////                        }
-////                    }
-////                    .padding()
-////                }
-////                .navigationTitle("Shop - Upgrade")
-////                .padding()
-//                
-//                Text("Back")
-//                    .background(Color.orange)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(10)
-//                    .onTapGesture {
-//                        self.isClickedToBack = true
-//                    }
-//                    .fullScreenCover(isPresented: $isClickedToBack) {
-//                        ProgressView(tamagochi: tamagochi)
-//                    }
-//            }
+
+import SwiftUI
+
+struct UpgradeItem : Identifiable {
+    var id = UUID()
+    var name: String
+    var description: String
+    var imageName: String
+    var cost: Int
+    var statKeyPath: ReferenceWritableKeyPath<Tamagochi, Stat>
+    var type: UpgradeType
+}
+
+enum UpgradeType: String {
+    case capacity = "Capacity"
+    case action = "Action"
+    case timer = "Timer"
+}
+
+struct ShopView: View {
+    @ObservedObject var tamagotchi: Tamagochi
+    
+    @State private var selectedShop: String = "Upgrade"
+    
+    let upgradeItems: [UpgradeItem] = [
+        UpgradeItem(name: "Increase Hunger Max",
+                    description: "Boosts the pet's maximum hunger capacity, allowing it to stay satisfied for longer periods.",
+                    imageName: "hunger",
+                    cost: 200,
+                    statKeyPath: \.hunger,
+                    type: .capacity),
+        
+        UpgradeItem(name: "Increase Feed Gains",
+                    description: "Enhances the effectiveness of feeding, increasing the amount of hunger satisfaction gained from each feeding.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.hunger,
+                    type: .action),
+        
+        UpgradeItem(name: "Increase Hunger Resistance",
+                    description: "Improves the pet's resistance to hunger, decreasing the rate at which it becomes hungry.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.hunger,
+                    type: .timer),
+        
+        UpgradeItem(name: "Increase Cleanliness Max",
+                    description: "Expands the pet's maximum cleanliness capacity, allowing it to stay clean for longer durations.",
+                    imageName: "cleanliness",
+                    cost: 200,
+                    statKeyPath: \.cleanliness,
+                    type: .capacity),
+        
+        UpgradeItem(name: "Increase Clean Gains",
+                    description: "Increases the amount of cleanliness restored when the pet is cleaned, making each cleaning session more effective.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.cleanliness,
+                    type: .action),
+        
+        UpgradeItem(name: "Increase Clean Resistance",
+                    description: "Boosts the pet's resistance to becoming dirty, reducing the frequency of cleanliness deterioration.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.cleanliness,
+                    type: .timer),
+        
+        UpgradeItem(name: "Increase Fun Max",
+                    description: "Raises the pet's maximum fun capacity, allowing it to stay entertained for longer periods.",
+                    imageName: "fun",
+                    cost: 200,
+                    statKeyPath: \.fun,
+                    type: .capacity),
+        
+        UpgradeItem(name: "Increase Play Gains",
+                    description: "Enhances the amount of fun gained from playing with the pet, making each play session more enjoyable.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.fun,
+                    type: .action),
+        
+        UpgradeItem(name: "Increase Fun Resistance",
+                    description: "Improves the pet's resistance to boredom, decreasing the rate at which it loses fun.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.fun,
+                    type: .timer),
+        
+        UpgradeItem(name: "Increase Energy Max",
+                    description: "Increases the pet's maximum energy capacity, enabling it to stay active for longer periods.",
+                    imageName: "energy",
+                    cost: 200,
+                    statKeyPath: \.energy,
+                    type: .capacity),
+        
+        UpgradeItem(name: "Increase Rest Gains",
+                    description: "Boosts the amount of energy restored when the pet rests, making each rest period more rejuvenating.",
+                    imageName: "feed",
+                    cost: 400,
+                    statKeyPath: \.energy,
+                    type: .action),
+        
+        UpgradeItem(name: "Increase Energy Resistance",
+                    description: "Enhances the pet's resistance to fatigue, reducing the rate at which it loses energy.",
+                    imageName: "hunger",
+                    cost: 500,
+                    statKeyPath: \.energy,
+                    type: .timer)
+    ]
+    
+    var body: some View {
+        Group {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                //                NavigationSplitView {
+                //                    List {
+                //                        Button("Upgrade") {
+                //                            selectedShop = "Upgrade"
+                //                        }
+                //                        Button("Accessories") {
+                //                            selectedShop = "Accessories"
+                //                        }
+                //                    }
+                //                    .navigationTitle("Shop Categories")
+                //                } detail: {
+                    VStack {
+                        ShopHeaderView(coins: tamagotchi.coins)
+                        ShopSelectionView(selectedShop: $selectedShop)
+                        if selectedShop == "Upgrade" {
+                            UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
+                        } else if selectedShop == "Accessories" {
+                            AccessoriesView(tamagotchi: tamagotchi)
+                        }
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+            }
 //        }
-//    }
-//}
-//
-//struct Content_View: View {
-//    @State var tamagochi: Tamagochi
-//    
-//    var body: some View {
-//        TabView {
-//            ShopView(tamagochi: tamagochi)
-//                .tabItem {
-//                    Label("Upgrade", systemImage: "arrow.up.circle")
-//                }
-//            Text("Accessories Page")
-//                .tabItem {
-//                    Label("Accessories", systemImage: "star.circle")
-//                }
-//            Text("Gacha Page")
-//                .tabItem {
-//                    Label("Gacha", systemImage: "gift.circle")
-//                }
-//        }
-//    }
-//}
-//
-//#Preview {
-//    @State var pet = Tamagochi()
-//    return Content_View(tamagochi: pet)
-//}
+            else {
+                NavigationView {
+                    VStack {
+                        ShopHeaderView(coins: tamagotchi.coins)
+                        ShopSelectionView(selectedShop: $selectedShop)
+                        if selectedShop == "Upgrade" {
+                            UpgradeView(tamagotchi: tamagotchi, upgradeItems: upgradeItems)
+                        } else if selectedShop == "Accessories" {
+                            AccessoriesView(tamagotchi: tamagotchi)
+                        }
+                    }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    @StateObject var tamagochi = Tamagochi()
+    return ShopView(tamagotchi: tamagochi)
+}

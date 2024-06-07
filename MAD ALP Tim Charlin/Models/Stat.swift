@@ -82,6 +82,18 @@ struct Stat{
             value = 0
         }
     }
+    
+    mutating func increaseCapacity(){
+        max_lvl += 1
+    }
+    
+    mutating func increaseAction(){
+        increase_lvl += 1
+    }
+    
+    mutating func timerReduction(){
+        reduction_lvl += 1
+    }
 
 }
 

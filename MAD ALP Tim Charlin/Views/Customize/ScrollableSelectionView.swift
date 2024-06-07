@@ -33,11 +33,15 @@ struct ScrollableSelectionView: View {
                                         withAnimation {
                                             scrollProxy.scrollTo(item, anchor: .center)
                                             selectedItem = item
+//                                            SoundManager.inst.play(sound: .Choose)
                                         }
 //                                        selectedItem = item
                                     }
                                     .onChange(of: isCentered) { newValue in
                                         if newValue {
+                                            #if os(iOS)
+                                            SoundManager.inst.play(sound: .Choose)
+                                            #endif
                                             selectedItem = item
                                         }
                                     }
@@ -55,6 +59,6 @@ struct ScrollableSelectionView: View {
 
 #Preview {
     let faces: [String] = ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"]
-    @State var selectedFace = "face_default"
+    @State var selectedFace = "face_confused"
     return ScrollableSelectionView(items: faces, selectedItem: $selectedFace)
 }

@@ -23,6 +23,9 @@ class Tamagochi: ObservableObject {
     @Published var selectedFace: String
     @Published var selectedHat: String
     
+    @Published var purchasedFaces: [String] = ["face_default"]
+    @Published var purchasedHats: [String] = ["hat_none"]
+    
     @Published var skinColor: Color
     @Published var coins: Int = 1000
     
@@ -112,4 +115,25 @@ class Tamagochi: ObservableObject {
         fun.minus()
         energy.minus()
     }
+    
+    func buyUpgrade(stat: ReferenceWritableKeyPath<Tamagochi, Stat>, cost: Int, increaseAmount: Int, type: String) {
+            guard coins >= cost else {
+                print("Not enough coins")
+                return
+            }
+
+            switch type {
+            case "Capacity":
+                coins -= cost
+                self[keyPath: stat].increaseCapacity()
+            case "Action":
+                coins -= cost
+                self[keyPath: stat].increaseAction() // Menambahkan langsung ke nilai
+            case "Timer":
+                coins -= cost
+                self[keyPath: stat].timerReduction() // Mengurangi dari nilai
+            default:
+                print("Invalid upgrade type")
+            }
+        }
 }
