@@ -19,12 +19,8 @@ struct CustomizeView: View {
         }
     }
 }
-
 struct iPhoneCustomizationView: View {
     @ObservedObject var tamagochi: Tamagochi
-    
-    var faces: [String] = ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"]
-    var hats: [String] = ["hat_none", "hat_christmas", "hat_mexican"]
     
     let frameSize: CGFloat = 256 * 3
     
@@ -41,7 +37,7 @@ struct iPhoneCustomizationView: View {
                     .frame(width: UIScreen.main.bounds.width, height: 440)
                     .padding(.top, -60)
                     .cornerRadius(20) // Add corner radius to the frame
-//                    .padding(.vertical, 40)
+                    .padding(.vertical, 40)
             }
             .padding(.top, 75)
             .frame(height: UIScreen.main.bounds.height / 10 * 6)
@@ -55,9 +51,8 @@ struct iPhoneCustomizationView: View {
                     
                     ColorPicker("Pick a Colour: ", selection: $tamagochi.skinColor)
 //                        .padding(.horizontal, 200)  Add horizontal padding for the color picker
-                    
-                    ScrollableSelectionView(items: faces, selectedItem: $tamagochi.selectedFace)
-                    ScrollableSelectionView(items: hats, selectedItem: $tamagochi.selectedHat)
+                    ScrollableSelectionView(items: tamagochi.purchasedFaces, selectedItem: $tamagochi.selectedFace)
+                    ScrollableSelectionView(items: tamagochi.purchasedHats, selectedItem: $tamagochi.selectedHat)
                 }
 //                .padding(.top, 60)
                 .padding(.horizontal, 20) // Add horizontal padding for the inner VStack
@@ -96,6 +91,7 @@ struct iPadCustomizationView: View {
             HStack(spacing: 20) {
                 VStack {
                     SelectableOptionView(title: "Select a Face:", options: ["face_default", "face_confused", "face_creeper", "face_derpy", "face_happy", "face_wooper"], selectedOption: $tamagochi.selectedFace)
+                    SelectableOptionView(title: "Select a Face:", options: tamagochi.purchasedFaces, selectedOption: $tamagochi.selectedFace)
                     
                     HStack {
                         Spacer()
@@ -107,6 +103,7 @@ struct iPadCustomizationView: View {
                 }
                 VStack {
                     SelectableOptionView(title: "Select a Hat:", options: ["hat_none", "hat_christmas", "hat_mexican"], selectedOption: $tamagochi.selectedHat)
+                    SelectableOptionView(title: "Select a Hat:", options: tamagochi.purchasedHats, selectedOption: $tamagochi.selectedHat)
                     
                     HStack {
                         Spacer()
@@ -153,9 +150,9 @@ struct CustomizeView_Previews: PreviewProvider {
         return Group {
         
             CustomizeView(tamagochi: tamagochi)
-                .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (5th generation)"))
                 .previewDisplayName("iPad Pro (12.9-inch) (5th generation)")
         }
     }
 }
+
 

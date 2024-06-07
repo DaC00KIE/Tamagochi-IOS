@@ -6,40 +6,55 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ProgressView: View {
     @StateObject var tamagochi: Tamagochi
+    
+    let screenWidth: CGFloat = UIScreen.main.bounds.width
+    let screenHeight: CGFloat = UIScreen.main.bounds.height
     
     let defaultFrameWidth = 100
     
     var body: some View {
         
         VStack{
-            Spacer()
-            ZStack{
-                TamagochiDisplay(tamagochi: tamagochi, frame: 300)
-                    .padding(.top, 20)
-                    .padding(.bottom, -50)
-                
-                VStack{
-                    VStack {
-                        Text("Health")
-                        ProgressBar(stat: $tamagochi.health, frameWidth: defaultFrameWidth * 2 + 40)
-                    }
+//            Spacer()
+            
+            ZStack {
+                Image("pillar-hd")
+                    .resizable()
+                    .padding(.top, 30)
+                    .frame(width: screenWidth > 600 ? 1100 : 400, height: screenWidth > 600 ? 1100 : 500)
+                ZStack{
+                    TamagochiDisplay(tamagochi: tamagochi, frame: screenWidth > 600 ? 650 : 300)
+                        .padding(.top,-100)
+                        .padding(.bottom, -50)
                     Spacer()
+                    
+                    VStack{
+                        VStack {
+                            Text("Health")
+                            ProgressBar(stat: $tamagochi.health, frameWidth: screenWidth > 600 ? defaultFrameWidth * 7 : defaultFrameWidth * 2 + 40)
+                            //                                .frame(width: screenWidth > 600 ? 1100 : 300)
+                        }
+                        Spacer()
+                    }
                 }
             }
+           
+//            Spacer()
             
             VStack {
                 Text("\(tamagochi.name)")
-                    .font(.largeTitle)
+                    .font(screenWidth > 600 ? .largeTitle : .title)
                     .padding()
                 
                 HStack {
                     VStack {
                         Text("Hunger")
-                            
-                        ProgressBar(stat: $tamagochi.hunger, frameWidth: defaultFrameWidth)
+                        
+                        ProgressBar(stat: $tamagochi.hunger, frameWidth: screenWidth > 600 ? defaultFrameWidth * 2 : defaultFrameWidth)
                         
                         Button(action: {
                             if !tamagochi.hunger.isFull {
@@ -50,16 +65,18 @@ struct ProgressView: View {
                             Text("Feed")
                         }
                         .padding()
-                        .frame(width: CGFloat(defaultFrameWidth))
-                        .background(Color.green)
+                        .frame(width: screenWidth > 600 ? 200 : 100, height: screenWidth > 600 ? 100 : 50)     .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     }
                     .padding(.horizontal)
                     
+                    Spacer()
+                        .frame(width: screenWidth > 600 ? 100 : 30)
+                    
                     VStack {
                         Text("Cleanliness")
-                        ProgressBar(stat: $tamagochi.cleanliness, frameWidth: defaultFrameWidth)
+                        ProgressBar(stat: $tamagochi.cleanliness,  frameWidth: screenWidth > 600 ? defaultFrameWidth * 2 : defaultFrameWidth)
                         
                         Button(action: {
                             if !tamagochi.cleanliness.isFull {
@@ -69,8 +86,7 @@ struct ProgressView: View {
                             Text("Clean")
                         }
                         .padding()
-                        .frame(width: CGFloat(defaultFrameWidth))
-                        .background(Color.blue)
+                        .frame(width: screenWidth > 600 ? 200 : 100, height: screenWidth > 600 ? 100 : 50)                           .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     }
@@ -80,7 +96,7 @@ struct ProgressView: View {
                 HStack {
                     VStack {
                         Text("Fun")
-                        ProgressBar(stat: $tamagochi.fun, frameWidth: defaultFrameWidth)
+                        ProgressBar(stat: $tamagochi.fun,  frameWidth: screenWidth > 600 ? defaultFrameWidth * 2 : defaultFrameWidth)
                         
                         Button(action: {
                             if !tamagochi.fun.isFull{
@@ -90,15 +106,18 @@ struct ProgressView: View {
                             Text("Play")
                         }
                         .padding()
-                        .frame(width: CGFloat(defaultFrameWidth))
-                        .background(Color.yellow)
+                        .frame(width: screenWidth > 600 ? 200 : 100, height: screenWidth > 600 ? 100 : 50)        .background(Color.yellow)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     }
                     .padding(.horizontal)
+                    
+                    Spacer()
+                        .frame(width: screenWidth > 600 ? 100 : 30)
+                    
                     VStack {
                         Text("Energy")
-                        ProgressBar(stat: $tamagochi.energy, frameWidth: defaultFrameWidth)
+                        ProgressBar(stat: $tamagochi.energy, frameWidth: screenWidth > 600 ? defaultFrameWidth * 2 : defaultFrameWidth)
                         
                         Button(action: {
                             if !tamagochi.energy.isFull{
@@ -108,17 +127,16 @@ struct ProgressView: View {
                             Text("Rest")
                         }
                         .padding()
-                        .frame(width: CGFloat(defaultFrameWidth))
-                        .background(Color.purple)
+                        .frame(width: screenWidth > 600 ? 200 : 100, height: screenWidth > 600 ? 100 : 50)                .background(Color.purple)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     }
                     .padding(.horizontal)
                 }
-                .padding(.bottom, 50)
+//                .padding(.bottom, 100)
                 
             }
-            .padding(.top, -60)
+            .padding(.top, screenWidth > 600 ? -300 : -100)
             .onReceive(tamagochi.timer) { _ in
                 tamagochi.minusBars()
             }
@@ -131,7 +149,7 @@ struct ProgressView: View {
 
 
 #Preview {
-//    var defaultPet = new Tamagochi()
+    //    var defaultPet = new Tamagochi()
     @State var pet = Tamagochi()
     return ProgressView(tamagochi: pet)
 }
