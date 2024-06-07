@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MAD_ALP_Tim_CharlinApp: App {
+    @StateObject var player = Player(id: 1, name: "DjDT")
+    
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            ContentView(tamagochi: player.tamagochi)
         }
     }
 }

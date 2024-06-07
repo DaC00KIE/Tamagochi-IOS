@@ -33,7 +33,7 @@ struct ScrollableSelectionView: View {
                                         withAnimation {
                                             scrollProxy.scrollTo(item, anchor: .center)
                                             selectedItem = item
-                                            SoundManager.inst.play(sound: .Choose)
+//                                            SoundManager.inst.play(sound: .Choose)
                                         }
 //                                        selectedItem = item
                                     }
