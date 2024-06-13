@@ -9,57 +9,64 @@
 /* Begin PBXBuildFile section */
 		040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */; };
 		040E41282BF5D34400358910 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E41272BF5D34400358910 /* ContentView.swift */; };
+		040E412A2BF5D34500358910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E41292BF5D34500358910 /* Assets.xcassets */; };
 		040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E412C2BF5D34500358910 /* Preview Assets.xcassets */; };
 		04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF42C0F7CE300F7F134 /* CustomizeView.swift */; };
 		04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF92C0F9F8000F7F134 /* Accessory.swift */; };
 		04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFB2C0FA02700F7F134 /* DataManager.swift */; };
 		04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */; };
 		0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AA482C083FFA005E85F4 /* ProgressView.swift */; };
-		0482EF7E2C1078170079B120 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482EF7D2C1078170079B120 /* Player.swift */; };
-		048DB3122C10B2C8006EA271 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3112C10B2C8006EA271 /* ScrollableSelectionView.swift */; };
-		048DB32C2C10DB18006EA271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E41292BF5D34500358910 /* Assets.xcassets */; };
-		048DB3342C110E7B006EA271 /* WatchTamagochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3332C110E7B006EA271 /* WatchTamagochiApp.swift */; };
-		048DB3362C110E7B006EA271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3352C110E7B006EA271 /* ContentView.swift */; };
-		048DB3382C110E7E006EA271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DB3372C110E7E006EA271 /* Assets.xcassets */; };
-		048DB33B2C110E7E006EA271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DB33A2C110E7E006EA271 /* Preview Assets.xcassets */; };
-		048DB33E2C110E7E006EA271 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 048DB3312C110E7B006EA271 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		048DB3452C111139006EA271 /* WatchDisplayTamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */; };
-		048DB3462C11117F006EA271 /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
-		04A1DAA72C11FDB100532568 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DAA62C11FDB100532568 /* ButtonAction.swift */; };
-		04A1DAA92C120D8E00532568 /* HorizontalPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DAA82C120D8E00532568 /* HorizontalPageIndicator.swift */; };
+		0452F5902C12D4D90089E330 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA52C117101009C1290 /* SoundManager.swift */; };
+		046851162C12266500B34914 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851152C12266500B34914 /* Stat.swift */; };
+		046851192C12269F00B34914 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851182C12269F00B34914 /* ScrollableSelectionView.swift */; };
+		0468511E2C122A2A00B34914 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851182C12269F00B34914 /* ScrollableSelectionView.swift */; };
+		0468511F2C122A2A00B34914 /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04112AF92C0F9F8000F7F134 /* Accessory.swift */; };
+		046851202C122A2A00B34914 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
+		046851212C122A2A00B34914 /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
+		046851222C122A2A00B34914 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851152C12266500B34914 /* Stat.swift */; };
+		046851272C122A5900B34914 /* HorizontalPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851252C122A5900B34914 /* HorizontalPageIndicator.swift */; };
+		0468512A2C122A9100B34914 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851282C122A9100B34914 /* StatView.swift */; };
+		0468512D2C122AC700B34914 /* WatchDisplayTamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468512B2C122AC700B34914 /* WatchDisplayTamagochi.swift */; };
+		0468512F2C122B1500B34914 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468512E2C122B1500B34914 /* ButtonAction.swift */; };
+		046851312C122B3200B34914 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851302C122B3200B34914 /* HomeView.swift */; };
+		046851332C122B4E00B34914 /* SwitchAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851322C122B4E00B34914 /* SwitchAccessory.swift */; };
+		046851352C122B7500B34914 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851342C122B7500B34914 /* Player.swift */; };
+		046851362C122B7500B34914 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046851342C122B7500B34914 /* Player.swift */; };
+		046851402C1238A100B34914 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468513F2C1238A100B34914 /* ShopItem.swift */; };
 		04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996352C0EEEA9000F479A /* Tamagochi.swift */; };
 		04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
-		04DC6D722C11155A00DAB420 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C996382C0F0FF4000F479A /* ProgressBar.swift */; };
-		04DC6D742C11181A00DAB420 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D732C11181A00DAB420 /* StatView.swift */; };
-		04DC6D762C1118DD00DAB420 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D752C1118DD00DAB420 /* HomeView.swift */; };
-		04DC6D782C11238800DAB420 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D772C11238800DAB420 /* Stat.swift */; };
-		04DC6D792C1124FA00DAB420 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D772C11238800DAB420 /* Stat.swift */; };
-		04DC6D7C2C1139DA00DAB420 /* ScrollableSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DB3112C10B2C8006EA271 /* ScrollableSelectionView.swift */; };
-		04DC6D812C1165EC00DAB420 /* SwitchAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D802C1165EC00DAB420 /* SwitchAccessoryView.swift */; };
-		14456E412C08417F00F24E96 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14456E402C08417F00F24E96 /* ShopView.swift */; };
+		04DC6D892C1176E600DAB420 /* WatchTamagochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */; };
+		04DC6D8B2C1176E600DAB420 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC6D8A2C1176E600DAB420 /* ContentView.swift */; };
+		04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8C2C1176E800DAB420 /* Assets.xcassets */; };
+		04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */; };
+		04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA82C11722C009C1290 /* Choose.wav */; };
+		3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EA92C11722C009C1290 /* Failed.wav */; };
+		3FCA8EAE2C11722C009C1290 /* Tab.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EAA2C11722C009C1290 /* Tab.wav */; };
+		3FCA8EAF2C11722C009C1290 /* Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA8EAB2C11722C009C1290 /* Complete.wav */; };
 		3FD260892C0028B60076637D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD260882C0028B60076637D /* ProfileView.swift */; };
 		3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608A2C00310A0076637D /* CircleImage.swift */; };
 		3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2608E2C0032280076637D /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		048DB33C2C110E7E006EA271 /* PBXContainerItemProxy */ = {
+		04DC6D912C1176E800DAB420 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 040E411A2BF5D34400358910 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 048DB3302C110E7B006EA271;
+			remoteGlobalIDString = 04DC6D852C1176E600DAB420;
 			remoteInfo = "WatchTamagochi Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		048DB3252C10C3B2006EA271 /* Embed Watch Content */ = {
+		04DC6D942C1176E900DAB420 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				048DB33E2C110E7E006EA271 /* WatchTamagochi Watch App.app in Embed Watch Content */,
+				04DC6D932C1176E800DAB420 /* WatchTamagochi Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,23 +84,28 @@
 		04112AFB2C0FA02700F7F134 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagochiDisplay.swift; sourceTree = "<group>"; };
 		0429AA482C083FFA005E85F4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		0482EF7D2C1078170079B120 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		048DB3112C10B2C8006EA271 /* ScrollableSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSelectionView.swift; sourceTree = "<group>"; };
-		048DB3312C110E7B006EA271 /* WatchTamagochi Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchTamagochi Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		048DB3332C110E7B006EA271 /* WatchTamagochiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTamagochiApp.swift; sourceTree = "<group>"; };
-		048DB3352C110E7B006EA271 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		048DB3372C110E7E006EA271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		048DB33A2C110E7E006EA271 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDisplayTamagochi.swift; sourceTree = "<group>"; };
-		04A1DAA62C11FDB100532568 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
-		04A1DAA82C120D8E00532568 /* HorizontalPageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPageIndicator.swift; sourceTree = "<group>"; };
+		046851152C12266500B34914 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		046851182C12269F00B34914 /* ScrollableSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSelectionView.swift; sourceTree = "<group>"; };
+		046851252C122A5900B34914 /* HorizontalPageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPageIndicator.swift; sourceTree = "<group>"; };
+		046851282C122A9100B34914 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		0468512B2C122AC700B34914 /* WatchDisplayTamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDisplayTamagochi.swift; sourceTree = "<group>"; };
+		0468512E2C122B1500B34914 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
+		046851302C122B3200B34914 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		046851322C122B4E00B34914 /* SwitchAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAccessory.swift; sourceTree = "<group>"; };
+		046851342C122B7500B34914 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0468513F2C1238A100B34914 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		04C996352C0EEEA9000F479A /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		04C996382C0F0FF4000F479A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		04DC6D732C11181A00DAB420 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
-		04DC6D752C1118DD00DAB420 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		04DC6D772C11238800DAB420 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
-		04DC6D802C1165EC00DAB420 /* SwitchAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAccessoryView.swift; sourceTree = "<group>"; };
-		14456E402C08417F00F24E96 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchTamagochi Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTamagochiApp.swift; sourceTree = "<group>"; };
+		04DC6D8A2C1176E600DAB420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04DC6D8C2C1176E800DAB420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FCA8EA52C117101009C1290 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		3FCA8EA82C11722C009C1290 /* Choose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Choose.wav; sourceTree = "<group>"; };
+		3FCA8EA92C11722C009C1290 /* Failed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Failed.wav; sourceTree = "<group>"; };
+		3FCA8EAA2C11722C009C1290 /* Tab.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tab.wav; sourceTree = "<group>"; };
+		3FCA8EAB2C11722C009C1290 /* Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Complete.wav; sourceTree = "<group>"; };
 		3FD260882C0028B60076637D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3FD2608A2C00310A0076637D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FD2608E2C0032280076637D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -107,7 +119,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		048DB32E2C110E7B006EA271 /* Frameworks */ = {
+		04DC6D832C1176E600DAB420 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				040E41242BF5D34400358910 /* MAD ALP Tim Charlin */,
-				048DB3322C110E7B006EA271 /* WatchTamagochi Watch App */,
+				04DC6D872C1176E600DAB420 /* WatchTamagochi Watch App */,
 				040E41232BF5D34400358910 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */,
-				048DB3312C110E7B006EA271 /* WatchTamagochi Watch App.app */,
+				04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +150,7 @@
 		040E41242BF5D34400358910 /* MAD ALP Tim Charlin */ = {
 			isa = PBXGroup;
 			children = (
+				3FCA8EA72C1171CB009C1290 /* Sounds */,
 				040E41252BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift */,
 				04C996322C0EEE60000F479A /* Views */,
 				04C996332C0EEE80000F479A /* Models */,
@@ -160,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				04112AF42C0F7CE300F7F134 /* CustomizeView.swift */,
-				048DB3112C10B2C8006EA271 /* ScrollableSelectionView.swift */,
+				046851182C12269F00B34914 /* ScrollableSelectionView.swift */,
 			);
 			path = Customize;
 			sourceTree = "<group>";
@@ -169,48 +182,28 @@
 			isa = PBXGroup;
 			children = (
 				04112AFF2C10009300F7F134 /* TamagochiDisplay.swift */,
+				3FCA8EA52C117101009C1290 /* SoundManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		048DB3322C110E7B006EA271 /* WatchTamagochi Watch App */ = {
+		046851232C122A3900B34914 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				048DB3432C11111B006EA271 /* Views */,
-				048DB3332C110E7B006EA271 /* WatchTamagochiApp.swift */,
-				048DB3352C110E7B006EA271 /* ContentView.swift */,
-				048DB3372C110E7E006EA271 /* Assets.xcassets */,
-				048DB3392C110E7E006EA271 /* Preview Content */,
+				046851242C122A4400B34914 /* Helpers */,
+				046851302C122B3200B34914 /* HomeView.swift */,
+				046851322C122B4E00B34914 /* SwitchAccessory.swift */,
 			);
-			path = "WatchTamagochi Watch App";
+			path = Views;
 			sourceTree = "<group>";
 		};
-		048DB3392C110E7E006EA271 /* Preview Content */ = {
+		046851242C122A4400B34914 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				048DB33A2C110E7E006EA271 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		048DB3432C11111B006EA271 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				04A1DAA52C11FD7C00532568 /* Helpers */,
-				04DC6D752C1118DD00DAB420 /* HomeView.swift */,
-				04DC6D802C1165EC00DAB420 /* SwitchAccessoryView.swift */,
-			);
-			name = Views;
-			path = Views/Views;
-			sourceTree = "<group>";
-		};
-		04A1DAA52C11FD7C00532568 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				048DB3442C111139006EA271 /* WatchDisplayTamagochi.swift */,
-				04DC6D732C11181A00DAB420 /* StatView.swift */,
-				04A1DAA62C11FDB100532568 /* ButtonAction.swift */,
-				04A1DAA82C120D8E00532568 /* HorizontalPageIndicator.swift */,
+				046851252C122A5900B34914 /* HorizontalPageIndicator.swift */,
+				046851282C122A9100B34914 /* StatView.swift */,
+				0468512B2C122AC700B34914 /* WatchDisplayTamagochi.swift */,
+				0468512E2C122B1500B34914 /* ButtonAction.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -221,7 +214,6 @@
 				040E41272BF5D34400358910 /* ContentView.swift */,
 				04112AFE2C10008300F7F134 /* Helpers */,
 				04112AF32C0F7CC400F7F134 /* Customize */,
-				04C996372C0F0FD6000F479A /* Shop */,
 				14456E3E2C0840A600F24E96 /* Profile */,
 				14456E3F2C0840CC00F24E96 /* Progress */,
 			);
@@ -231,10 +223,11 @@
 		04C996332C0EEE80000F479A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04C996352C0EEEA9000F479A /* Tamagochi.swift */,
 				04112AF92C0F9F8000F7F134 /* Accessory.swift */,
-				0482EF7D2C1078170079B120 /* Player.swift */,
-				04DC6D772C11238800DAB420 /* Stat.swift */,
+				04C996352C0EEEA9000F479A /* Tamagochi.swift */,
+				046851152C12266500B34914 /* Stat.swift */,
+				046851342C122B7500B34914 /* Player.swift */,
+				0468513F2C1238A100B34914 /* ShopItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,12 +240,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		04C996372C0F0FD6000F479A /* Shop */ = {
+		04DC6D872C1176E600DAB420 /* WatchTamagochi Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				14456E402C08417F00F24E96 /* ShopView.swift */,
+				046851232C122A3900B34914 /* Views */,
+				04DC6D882C1176E600DAB420 /* WatchTamagochiApp.swift */,
+				04DC6D8A2C1176E600DAB420 /* ContentView.swift */,
+				04DC6D8C2C1176E800DAB420 /* Assets.xcassets */,
+				04DC6D8E2C1176E800DAB420 /* Preview Content */,
 			);
-			path = Shop;
+			path = "WatchTamagochi Watch App";
+			sourceTree = "<group>";
+		};
+		04DC6D8E2C1176E800DAB420 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04DC6D8F2C1176E800DAB420 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		14456E3E2C0840A600F24E96 /* Profile */ = {
@@ -274,6 +279,17 @@
 			path = Progress;
 			sourceTree = "<group>";
 		};
+		3FCA8EA72C1171CB009C1290 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA8EA82C11722C009C1290 /* Choose.wav */,
+				3FCA8EAB2C11722C009C1290 /* Complete.wav */,
+				3FCA8EA92C11722C009C1290 /* Failed.wav */,
+				3FCA8EAA2C11722C009C1290 /* Tab.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,25 +300,25 @@
 				040E411E2BF5D34400358910 /* Sources */,
 				040E411F2BF5D34400358910 /* Frameworks */,
 				040E41202BF5D34400358910 /* Resources */,
-				048DB3252C10C3B2006EA271 /* Embed Watch Content */,
+				04DC6D942C1176E900DAB420 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				048DB33D2C110E7E006EA271 /* PBXTargetDependency */,
+				04DC6D922C1176E800DAB420 /* PBXTargetDependency */,
 			);
 			name = "MAD ALP Tim Charlin";
 			productName = "MAD ALP Tim Charlin";
 			productReference = 040E41222BF5D34400358910 /* MAD ALP Tim Charlin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		048DB3302C110E7B006EA271 /* WatchTamagochi Watch App */ = {
+		04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 048DB33F2C110E7E006EA271 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */;
+			buildConfigurationList = 04DC6D972C1176E900DAB420 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */;
 			buildPhases = (
-				048DB32D2C110E7B006EA271 /* Sources */,
-				048DB32E2C110E7B006EA271 /* Frameworks */,
-				048DB32F2C110E7B006EA271 /* Resources */,
+				04DC6D822C1176E600DAB420 /* Sources */,
+				04DC6D832C1176E600DAB420 /* Frameworks */,
+				04DC6D842C1176E600DAB420 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -310,7 +326,7 @@
 			);
 			name = "WatchTamagochi Watch App";
 			productName = "WatchTamagochi Watch App";
-			productReference = 048DB3312C110E7B006EA271 /* WatchTamagochi Watch App.app */;
+			productReference = 04DC6D862C1176E600DAB420 /* WatchTamagochi Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -326,7 +342,7 @@
 					040E41212BF5D34400358910 = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					048DB3302C110E7B006EA271 = {
+					04DC6D852C1176E600DAB420 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -345,7 +361,7 @@
 			projectRoot = "";
 			targets = (
 				040E41212BF5D34400358910 /* MAD ALP Tim Charlin */,
-				048DB3302C110E7B006EA271 /* WatchTamagochi Watch App */,
+				04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -355,17 +371,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048DB32C2C10DB18006EA271 /* Assets.xcassets in Resources */,
 				040E412D2BF5D34500358910 /* Preview Assets.xcassets in Resources */,
+				3FCA8EAF2C11722C009C1290 /* Complete.wav in Resources */,
+				3FCA8EAE2C11722C009C1290 /* Tab.wav in Resources */,
+				3FCA8EAC2C11722C009C1290 /* Choose.wav in Resources */,
+				040E412A2BF5D34500358910 /* Assets.xcassets in Resources */,
+				3FCA8EAD2C11722C009C1290 /* Failed.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		048DB32F2C110E7B006EA271 /* Resources */ = {
+		04DC6D842C1176E600DAB420 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048DB33B2C110E7E006EA271 /* Preview Assets.xcassets in Resources */,
-				048DB3382C110E7E006EA271 /* Assets.xcassets in Resources */,
+				04DC6D902C1176E800DAB420 /* Preview Assets.xcassets in Resources */,
+				04DC6D8D2C1176E800DAB420 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,50 +397,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD2608F2C0032280076637D /* UserProfileView.swift in Sources */,
-				04DC6D782C11238800DAB420 /* Stat.swift in Sources */,
 				04112AFC2C0FA02700F7F134 /* DataManager.swift in Sources */,
-				14456E412C08417F00F24E96 /* ShopView.swift in Sources */,
+				046851402C1238A100B34914 /* ShopItem.swift in Sources */,
+				046851162C12266500B34914 /* Stat.swift in Sources */,
 				04112AF52C0F7CE300F7F134 /* CustomizeView.swift in Sources */,
-				0482EF7E2C1078170079B120 /* Player.swift in Sources */,
 				040E41282BF5D34400358910 /* ContentView.swift in Sources */,
 				3FD2608B2C00310A0076637D /* CircleImage.swift in Sources */,
 				04C996392C0F0FF4000F479A /* ProgressBar.swift in Sources */,
 				3FD260892C0028B60076637D /* ProfileView.swift in Sources */,
+				0452F5902C12D4D90089E330 /* SoundManager.swift in Sources */,
 				04112AFA2C0F9F8000F7F134 /* Accessory.swift in Sources */,
 				04112B002C10009300F7F134 /* TamagochiDisplay.swift in Sources */,
+				046851192C12269F00B34914 /* ScrollableSelectionView.swift in Sources */,
 				040E41262BF5D34400358910 /* MAD_ALP_Tim_CharlinApp.swift in Sources */,
-				048DB3122C10B2C8006EA271 /* ScrollableSelectionView.swift in Sources */,
 				0429AA492C083FFA005E85F4 /* ProgressView.swift in Sources */,
+				046851352C122B7500B34914 /* Player.swift in Sources */,
 				04C996362C0EEEA9000F479A /* Tamagochi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		048DB32D2C110E7B006EA271 /* Sources */ = {
+		04DC6D822C1176E600DAB420 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A1DAA92C120D8E00532568 /* HorizontalPageIndicator.swift in Sources */,
-				04DC6D812C1165EC00DAB420 /* SwitchAccessoryView.swift in Sources */,
-				04DC6D742C11181A00DAB420 /* StatView.swift in Sources */,
-				04A1DAA72C11FDB100532568 /* ButtonAction.swift in Sources */,
-				04DC6D7C2C1139DA00DAB420 /* ScrollableSelectionView.swift in Sources */,
-				04DC6D792C1124FA00DAB420 /* Stat.swift in Sources */,
-				04DC6D762C1118DD00DAB420 /* HomeView.swift in Sources */,
-				048DB3362C110E7B006EA271 /* ContentView.swift in Sources */,
-				048DB3342C110E7B006EA271 /* WatchTamagochiApp.swift in Sources */,
-				048DB3452C111139006EA271 /* WatchDisplayTamagochi.swift in Sources */,
-				04DC6D722C11155A00DAB420 /* ProgressBar.swift in Sources */,
-				048DB3462C11117F006EA271 /* Tamagochi.swift in Sources */,
+				0468511E2C122A2A00B34914 /* ScrollableSelectionView.swift in Sources */,
+				0468511F2C122A2A00B34914 /* Accessory.swift in Sources */,
+				0468512F2C122B1500B34914 /* ButtonAction.swift in Sources */,
+				046851202C122A2A00B34914 /* ProgressBar.swift in Sources */,
+				046851362C122B7500B34914 /* Player.swift in Sources */,
+				0468512A2C122A9100B34914 /* StatView.swift in Sources */,
+				046851212C122A2A00B34914 /* Tamagochi.swift in Sources */,
+				046851272C122A5900B34914 /* HorizontalPageIndicator.swift in Sources */,
+				046851222C122A2A00B34914 /* Stat.swift in Sources */,
+				046851332C122B4E00B34914 /* SwitchAccessory.swift in Sources */,
+				04DC6D8B2C1176E600DAB420 /* ContentView.swift in Sources */,
+				046851312C122B3200B34914 /* HomeView.swift in Sources */,
+				0468512D2C122AC700B34914 /* WatchDisplayTamagochi.swift in Sources */,
+				04DC6D892C1176E600DAB420 /* WatchTamagochiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		048DB33D2C110E7E006EA271 /* PBXTargetDependency */ = {
+		04DC6D922C1176E800DAB420 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 048DB3302C110E7B006EA271 /* WatchTamagochi Watch App */;
-			targetProxy = 048DB33C2C110E7E006EA271 /* PBXContainerItemProxy */;
+			target = 04DC6D852C1176E600DAB420 /* WatchTamagochi Watch App */;
+			targetProxy = 04DC6D912C1176E800DAB420 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -604,7 +627,7 @@
 			};
 			name = Release;
 		};
-		048DB3402C110E7E006EA271 /* Debug */ = {
+		04DC6D952C1176E900DAB420 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -617,6 +640,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WatchTamagochi;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Gavin.MAD-ALP-Tim-Charlin";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,7 +657,7 @@
 			};
 			name = Debug;
 		};
-		048DB3412C110E7E006EA271 /* Release */ = {
+		04DC6D962C1176E900DAB420 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -646,6 +670,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WatchTamagochi;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Gavin.MAD-ALP-Tim-Charlin";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -683,11 +708,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		048DB33F2C110E7E006EA271 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */ = {
+		04DC6D972C1176E900DAB420 /* Build configuration list for PBXNativeTarget "WatchTamagochi Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				048DB3402C110E7E006EA271 /* Debug */,
-				048DB3412C110E7E006EA271 /* Release */,
+				04DC6D952C1176E900DAB420 /* Debug */,
+				04DC6D962C1176E900DAB420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
